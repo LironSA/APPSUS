@@ -1,4 +1,4 @@
-import userMsg from './cmps/user-msg.cmp.js'
+import userMsg from './user-msg.cmp.js'
 
 
 export default {
