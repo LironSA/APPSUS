@@ -10,7 +10,6 @@ export default {
             <!-- <router-link>Email</router-link> -->
             <!-- <router-link>Notes</router-link>/ -->
             <router-link to="/about">About</router-link>
-
         </nav>
     </header>
     
