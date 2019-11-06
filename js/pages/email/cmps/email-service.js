@@ -1,5 +1,5 @@
 'use strict';
-import storageService from '../../../services/util-service.js'
+import {storageService} from '../../../services/util-service.js'
 
 export const emailService = {
     getEmails

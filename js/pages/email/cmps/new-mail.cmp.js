@@ -30,7 +30,18 @@ export default {
         }
     },
     created(){
-        console.log('in New mail');
+        console.log('New mail created');
         
+    },
+    methods:{
+        deleteEmail(){
+            //todo
+        },
+        draftEmail(){
+            //todo
+        },
+        sendEmail(){
+            //todo
+        }
     }
 }
