@@ -7,16 +7,22 @@ export default {
     template: `
     <section class="email flex">
        <email-menu></email-menu>
-       <router-view :emails="filteredEmails"></router-view>
+       <router-view :emails="emails"></router-view>
     </section>
                 `,
     components: {
         emailMenu
     },
+    data(){
+        return{
+            emails:[]
+        }
+    },
     created() {
         emailService.getEmails()
             .then(emails => {
                 console.log(emails);
+                this.emails=emails
             })
     },
     computed: {
