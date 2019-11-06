@@ -1,7 +1,9 @@
+import homePageCmp from './pages/home.cmp.js'
+
 let myRoutes = [
     {
-        path: '/missbooks',
-        component: bookAppCmp
+        path: '/home',
+        component: homePageCmp
     },
 
 ]

@@ -6,7 +6,7 @@ export default {
         <section class="user-msg" v-if="msg" :class="msg.class">
             <button @click="close">x</button>
             <p>{{msg.txt}}</p>
-            <router-link to="msg.path"></router-link>
+            <router-link v-if="msg.path" to="msg.path"></router-link>
         </section>
     `,
     data() {
