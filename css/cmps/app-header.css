@@ -12,7 +12,15 @@
 }
 
 .nav-header {
-    width: 60%;
+    width: 400px;
     align-items: center;
     font-size: 1.5rem;
+    position: absolute;
+    right: 0;
+
+}
+
+img.nav-header{
+    height: 100px;
+    width: 100px;
 }
