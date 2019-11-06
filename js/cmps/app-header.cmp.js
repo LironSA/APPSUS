@@ -5,6 +5,7 @@ export default {
     template: `
     <header class="app-header">
         <h1> im the header </h1>
+        
         <nav>
             <router-link to="/home">Home Page</router-link>
 
