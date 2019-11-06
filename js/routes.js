@@ -1,10 +1,22 @@
 import homePageCmp from './pages/home.cmp.js'
+import emailCmp from './pages/email/email.cmp.js'
+import newMailCmp from './pages/email/cmps/new-mail.cmp.js'
 
 let myRoutes = [
     {
         path: '/home',
         component: homePageCmp
     },
+    {
+        path: '/email',
+        component: emailCmp,
+        children: [
+            {
+                path: 'compose',
+                component: newMailCmp
+            }
+        ]
+    }
 
 ]
 const myRouter = new VueRouter({ routes: myRoutes })

@@ -1,0 +1,8 @@
+.app-footer {
+    font-family: Indie Flower, sans-serif;
+    background-color: lightgoldenrodyellow;
+    padding: 2px;
+    /* margin: 5px; */
+    border: blueviolet 1px solid;
+    text-align: center;
+}
