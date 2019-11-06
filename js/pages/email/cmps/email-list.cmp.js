@@ -8,7 +8,6 @@ export default {
             <email-preview v-for="email in emails" :key="email.id" v-bind:email="email">
             </email-preview>
         </ul>
-
     </section>
     `,
     data() {
