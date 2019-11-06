@@ -1,4 +1,4 @@
-import homePageCmp from './pages.home.cmp.js'
+import homePageCmp from './pages/home.cmp.js'
 
 let myRoutes = [
     {
