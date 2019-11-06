@@ -1,0 +1,51 @@
+/* ----- EMAIL MENU ----- */
+
+.email-menu{
+    width: 30%;
+}
+.email-menu nav{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.email-menu-link{
+    width: 100%;
+    text-align: center;
+}
+
+
+/* ----- EMAIL NEW ----- */
+
+.new-email {
+    margin: 0 10px 10px 10px;
+    border:gray 1px solid;
+    width: 80%;
+}
+
+.new-email-header{
+    padding: 10px;
+    background: rgb(49, 47, 47);
+    color: white;
+}
+
+.send-to {
+    width: 90%;
+    margin: 10px;
+    border: none;
+    border-bottom: gray 1px solid;
+}
+
+.new-email h2 {
+    /* width: 30%; */
+    padding: 10px;
+    right: 0;
+    margin: 10px;
+    font-size: 1rem;
+}
+
+.new-email textarea {
+    height: 200px;
+    width: 95%;
+    margin: 20px;
+}
