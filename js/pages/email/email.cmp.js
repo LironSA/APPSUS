@@ -7,7 +7,7 @@ export default {
     template: `
     <section class="email flex">
        <email-menu></email-menu>
-       <router-view v-if="emails" :emails="emails"></router-view>
+       <router-view v-if="emails" :emails="filteredEmails"></router-view>
     </section>
                 `,
     components: {
@@ -16,6 +16,7 @@ export default {
     data() {
         return {
             emails: [],
+
             filterBy: {
                 type: '',
                 selectVal: '',
@@ -26,33 +27,61 @@ export default {
     created() {
         emailService.getEmails()
             .then(emails => {
-                console.log(emails);
                 this.emails = emails
             })
     },
-    methods: {
-        filterEmails() {
-            let filteredEmails;
-            this.emails.forEach(email => {
-                if (email.type) filteredEmails.push
-            })
 
-        }
-    },
     computed: {
         filteredEmails() {
-            if (filterBy.type === 'starred') {
+            let emails = this.emails
+            let type = this.filterBy.type
+            let selcet = this.filterBy.selectVal
+            let search = this.filterBy.txtSearch
+            console.log('emails>', emails);
+            console.log('type>', this.filterBy.type, 'WTF');
+            console.log('selcet>', selcet);
+            console.log('search>', search);
+            if (!type && !selcet && !search) {
+                return emails
+            } else {
 
-                return
+
+                let filteredEmails = emails
+                if (type) {
+                    filteredEmails = filteredEmails.filter(email => {
+                        let filter = 'is' + type
+                        return email.filter === true
+                    })
+                }
+                if (select) {
+                    if (selcet === 'isRead') {
+                        filteredEmails = filteredEmails.filter(email => {
+                            return email.isRead === true
+                        })
+                    } else {
+                        filteredEmails = filteredEmails.filter(email => {
+                            return email.isRead === false
+                        })
+                    }
+                }
+                if (search) {
+                    let regex = new RegExp(`${search}`, 'i');
+                    filteredEmails = filteredEmails.filter(book => regex.test(book.title))
+                }
+                return filteredEmails
             }
-            // if (filterBy.type === 'starred')
-            //     if (filterBy.type === 'starred')
-            //         if (filterBy.type === 'starred')
         }
     },
     watch: {
         '$route.params.type'() {
-            console.log('gotem', this.$route.params.type);
+            let emailType = this.$route.params.type
+            let filterByType = this.filterBy.type
+            if (emailType === 'Inbox') {
+                filterByType = ''
+            } else {
+                filterByType = emailType
+            }
+            console.log('filter type changed to', filterByType);
         }
     }
 

@@ -5,10 +5,10 @@ export default {
                 <section class="email-menu">
                     <nav class="flex col ">
                         <router-link class="email-menu-link compose" to="/email/compose">Compose</router-link>
-                        <router-link class="email-menu-link" to="/email/list/inbox">inbox</router-link>
-                        <router-link class="email-menu-link" to="/email/list/starred">starred</router-link>
-                        <router-link class="email-menu-link" to="/email/list/sent">Sent mails</router-link>
-                        <router-link class="email-menu-link" to="/email/list/drafts">Drafts</router-link>
+                        <router-link class="email-menu-link" to="/email/list/Inbox">inbox</router-link>
+                        <router-link class="email-menu-link" to="/email/list/Starred">starred</router-link>
+                        <router-link class="email-menu-link" to="/email/list/Sent">Sent mails</router-link>
+                        <router-link class="email-menu-link" to="/email/list/Draft">Drafts</router-link>
                     </nav>
                 </section>
     `,
