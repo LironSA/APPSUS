@@ -1,7 +1,7 @@
 /* ----- EMAIL MENU ----- */
 
 .email-menu{
-    width: 30%;
+    width: 20%;
     border-right: gray 1px solid;
 }
 .email-menu nav{
@@ -63,4 +63,34 @@
 
 
 /* ----- EMAIL PREVIEW ----- */
+
+.email-list {
+    width: 80%;
+}
+
+
+/* ----- EMAIL PREVIEW ----- */
+
+.preview-container {
+    width: 100%;
+}
+
+.preview-list {
+    width: 20%;
+    float: left;
+    flex-direction: row;
+}
+
+.prev-name {
+    margin-left: 5%;
+    width: 20%;
+}
+.prev-subj {
+    width: 70%;
+}
+.prev-sent {
+    width: 10%;
+    margin-right: 5%;
+}
+
 
