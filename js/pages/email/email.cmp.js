@@ -7,7 +7,7 @@ export default {
     template: `
     <section class="email flex">
        <email-menu></email-menu>
-       <router-view :emails="emails"></router-view>
+       <router-view v-if="emails" :emails="emails"></router-view>
     </section>
                 `,
     components: {
