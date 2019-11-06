@@ -7,7 +7,7 @@ export default {
     template: `
     <section class="email flex">
        <email-menu></email-menu>
-       <router-view :emails="currProp"></router-view>
+       <router-view :emails="filteredEmails"></router-view>
     </section>
                 `,
     components: {
@@ -20,7 +20,7 @@ export default {
             })
     },
     computed: {
-        currProp() {
+        filteredEmails() {
             if (this.$route.name === 'a') { return { foo: this.foo } }
             if (this.$route.name === 'b') { return { bar: this.bar } }
 
@@ -28,7 +28,7 @@ export default {
     },
     watch:{
         '$route.params.type'(){
-            console.log('gotem',$route.params.type);
+            console.log('gotem',this.$route.params.type);
         } 
     }
 
