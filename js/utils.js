@@ -1,12 +1,34 @@
 'use strict'
 
+ 
+//------- STORAGE SERVICE -------//
 
-function saveToStorage(key, value) {
-    localStorage.setItem(key, JSON.stringify(value));
+export const storageService = {
+    load,
+    store,
 }
 
-function loadFromStorage(key) {
-    var str = localStorage.getItem(key);
-    var value = JSON.parse(str)
+function load(key) {
+    const json = localStorage.getItem(key);
+    const value = JSON.parse(json)
     return value;
 }
+
+function store(key, value) {
+    const json = JSON.stringify(value);
+    localStorage.setItem(key, json)
+}
+
+
+//------- GENERAL -------//
+
+
+export function makeId(length=3) {
+    var txt = '';
+    var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    for(var i=0; i < length; i++){
+        txt += possible.charAt(Math.floor(Math.random() * possible.length));
+    }
+    return txt;
+}
+
