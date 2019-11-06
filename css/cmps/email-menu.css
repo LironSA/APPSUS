@@ -1,0 +1,13 @@
+.email-menu{
+    width: 30%;
+}
+.email-menu nav{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.email-menu-link{
+width: 100%;
+text-align: center;
+}

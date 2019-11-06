@@ -6,6 +6,11 @@ export default {
                     <h1>new mail section</h1>
                 </section>            
     `,
+    data(){
+        return{
+
+        }
+    },
     created(){
         console.log('in New mail');
         

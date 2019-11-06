@@ -26,7 +26,7 @@
     flex-wrap: wrap;
 }
 
-.column {
+.col{
     flex-direction: column ;
 }
 

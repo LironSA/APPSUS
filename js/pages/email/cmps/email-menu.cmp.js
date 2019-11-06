@@ -2,8 +2,8 @@
 
 export default {
     template: `
-                <section class="email-menu flex col">
-                    <nav>
+                <section class="email-menu">
+                    <nav class="flex col">
                         <router-link class="email-menu-link" to="/email/compose">Compose</router-link>
                         <router-link class="email-menu-link" to="">inbox</router-link>
                         <router-link class="email-menu-link" to="">starred</router-link>
@@ -11,5 +11,5 @@ export default {
                         <router-link class="email-menu-link" to="">Drafts</router-link>
                     </nav>
                 </section>
-    `
+    `,
 }
