@@ -8,9 +8,9 @@ let app = {
     router,
     el: '.my-app',
     template:
-        `   <div>
+        `   <div class="main-container">
                 <app-header></app-header>
-                <router-view></router-view>
+                <router-view style="height: 80%; overflow: scroll;"></router-view>
                 <app-footer></app-footer>
             </div>
         `
