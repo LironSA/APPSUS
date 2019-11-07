@@ -75,13 +75,14 @@ export default {
     watch: {
         '$route.params.type'() {
             let emailType = this.$route.params.type
-            let filterByType = this.filterBy.type
+            console.log('type from url',emailType);
             if (emailType === 'Inbox') {
-                filterByType = ''
+                this.filterBy.type = ''
             } else {
-                filterByType = emailType
+                console.log('got here!123');
+                this.filterBy.type = emailType
             }
-            console.log('filter type changed to', filterByType);
+            console.log('filter type changed to',  this.filterBy.type);
         }
     }
 

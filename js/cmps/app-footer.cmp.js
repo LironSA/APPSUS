@@ -3,7 +3,7 @@
 export default {
     template: `
             <section class="app-footer">
-            <p> © Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, odit!</p>
+            <p> © Inon & Liron * VUE-ing with a smile * </p>
             </section>
     `
 }

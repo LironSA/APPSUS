@@ -1,11 +1,13 @@
 .app-footer {
     font-family: Indie Flower, sans-serif;
-    background-color: lightgoldenrodyellow;
+    font-size: 1.3rem;
+    font-weight: 700;
+    background-color: orange;
     padding: 2px;
     border: blueviolet 1px solid;
     text-align: center;
-    /* position: absolute; */
-    bottom: 0;
     width: 100%;
-    margin: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+    bottom: 0;
 }
