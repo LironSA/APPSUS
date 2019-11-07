@@ -13,7 +13,7 @@ export default {
                     <section>
                         <button @click="sendEmail">Send</button>
                         <button @click="draftEmail">Draft</button>
-                        <button @click="deleteEmail">Delete</button>
+                        <button @click="removeEmail">Delete</button>
 
                     </section>            
                 </section>            
@@ -34,7 +34,7 @@ export default {
         
     },
     methods:{
-        deleteEmail(){
+        removeEmail(){
             //todo
         },
         draftEmail(){

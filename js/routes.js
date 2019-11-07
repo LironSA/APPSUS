@@ -20,7 +20,7 @@ let myRoutes = [
             {
                 path: 'list/:type',
                 component: emailList
-            }
+            },
             {
                 path: 'list/:details',
                 component: emailList

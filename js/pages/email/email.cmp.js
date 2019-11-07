@@ -28,7 +28,15 @@ export default {
     },
     methods: {
         removeEmail(id) {
-            console.log("ID got to email comp: ", id)
+            emailService.removeEmail(id) 
+            .then(()=>{
+                const msg = {
+                    txt: `email id:(${id}) Deleted Succefully `,
+                    type: 'success'
+                }
+                eventBus.$emit('show-msg', msg)
+                // console.log("ID is here!!!",id)
+            })
         }
         
     },

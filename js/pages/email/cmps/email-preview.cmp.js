@@ -1,5 +1,7 @@
 import { eventBus } from "../../../services/event-bus.service.js";
 
+
+
 // TODO - limit the prev body with MORE
 
 export default {
@@ -22,7 +24,7 @@ export default {
                 
                 <!-- <button @click="detailedEmail">Full details</button> -->
                 <!-- <button @click="replyEmail">Full details</button> -->
-                <button @click.stop="deleteEmail(email.id)">Delete</button>
+                <button @click.stop="removeEmail(email.id)">Delete</button>
                 <!-- <router-link :to="'/book/details/' + book.id" >Book ID</router-link> -->
             </li>
         </section>
@@ -46,13 +48,10 @@ export default {
         emailClicked() {
             this.isSelected = !this.isSelected;
         },
-        deleteEmail(id) {
-            eventBus.$emit('removeEmail', id)
-            console.log("ID is here!!!",id)
-        },
-        showDetails() {
-
+        removeEmail(id){
+            eventBus.$emit('removeEmail',id)
         }
+       
     }
      
 }

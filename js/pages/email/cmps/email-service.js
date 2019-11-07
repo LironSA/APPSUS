@@ -1,26 +1,33 @@
 'use strict';
 import { storageService } from '../../../services/util-service.js'
-import{makeId}  from '../../../services/util-service.js'
+import { makeId } from '../../../services/util-service.js'
+
 export const emailService = {
     getEmails,
     removeEmail
 }
 const EMAILS_KEY = 'emails'
+
+var gEmails;
+
 function getEmails() {
     let emails = storageService.load(EMAILS_KEY)
     if (!emails || !emails.length) {
         emails = DEFUALT_EMAILS
         storageService.store(EMAILS_KEY, emails)
+        gEmails = emails;
     }
-    return Promise.resolve(emails)
+    return Promise.resolve(gEmails)
 }
 
-
-
 function removeEmail(id) {
-    var idx = emails.findIndex(email =>email.id === id);
-    if (idx !== -1)  emails.splice(idx, 1)
-    storageService.store(EMAILS_KEY, emails)
+    var idx = gEmails.findIndex(email => email.id === id);
+    if (idx !== -1){
+       let mail= gEmails.splice(idx, 1)
+       console.log('mail:',mail);
+       
+    }  
+    storageService.store(EMAILS_KEY, gEmails)
     return Promise.resolve();
 }
 
@@ -39,3 +46,5 @@ const DEFUALT_EMAILS = [
     { id: makeId(), sentTo: { to: [], cc: [], bcc: [] }, receivedFrom: { name: 'My Sharona', addr: 'Sharona@gmail.com' }, subject: 'Lorem', body: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis, corporis!', isRead: false, sentAt: 1551542930594 },
     { id: makeId(), sentTo: { to: [], cc: [], bcc: [] }, receivedFrom: { name: 'Luka', addr: 'Luka@gmail.com' }, subject: 'Lorem', body: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis, corporis!', isRead: false, sentAt: 1559876930594 },
 ]
+
+getEmails();
