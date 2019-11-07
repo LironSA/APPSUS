@@ -11,7 +11,6 @@ export default {
             <img src="img/menu.JPG" alt=""></button>
             <user-msg></user-msg>
 
-        <!-- <router-link to="/about">About</router-link> -->
         <nav class="nav-header flex wrap" v-if="isOpenMenu">
             <router-link to="/email/list/inbox"><img src="img/email-origin.JPG" alt=""></router-link> 
             <router-link to="/note"><img src="img/notes_origin.JPG" alt=""> </router-link> 

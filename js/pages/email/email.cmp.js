@@ -59,7 +59,6 @@ export default {
         filteredEmails() {
             if (!this.filterBy.type && !this.filterBy.selectVal && !this.filterBy.txtSearch) {
                 return this.emails.filter(email => {
-                    console.log(email.isRead);
                     return email.isSent === false
                 })
             } else {
