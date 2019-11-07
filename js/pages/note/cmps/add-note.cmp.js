@@ -21,12 +21,12 @@ export default {
     computed: {
         currPlaceholder() {
             let placeholder;
-            if (this.noteType === txt) 
-                placeholder = "What's on your mind?"
+            if (this.noteType === 'txt') 
+                placeholder = "What's on your mind?";
+            if (this.noteType === 'list') 
+                placeholder = "Enter your TODO list";
 
-
-            return 
+            return placeholder
         }
-
-            }
+    }
 }
