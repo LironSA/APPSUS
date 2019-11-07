@@ -49,7 +49,7 @@ export default {
     methods: {
         emailClicked(id) {
             this.isSelected = !this.isSelected;
-            this.setEmailProperty(id, 'isRead', 'true')
+            this.setEmailProperty(id, 'isRead', true)
         },
         removeEmail(id){
             eventBus.$emit('removeEmail',id)

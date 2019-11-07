@@ -14,7 +14,7 @@ export default {
         <!-- <router-link to="/about">About</router-link> -->
         <nav class="nav-header flex wrap" v-if="isOpenMenu">
             <router-link to="/email/list/inbox"><img src="img/email-origin.JPG" alt=""></router-link> 
-            <router-link to="/notes"><img src="img/notes_origin.JPG" alt=""> </router-link> 
+            <router-link to="/keep"><img src="img/notes_origin.JPG" alt=""> </router-link> 
             <router-link to="/coming-soon"><img src="img/maps.JPG" alt=""> </router-link> 
             <router-link to="/coming-soon"><img src="img/calander.JPG" alt=""> </router-link> 
             <router-link to="/coming-soon"><img src="img/youtube.JPG" alt=""> </router-link> 
