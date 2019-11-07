@@ -25,7 +25,7 @@ export default {
     computed: {
         timeToShow() {
             var time = new Date(this.email.sentAt);
-            var jsonDate = (time).toJSON().slice(0,19);
+            var jsonDate = (time).toJSON().slice(0,10);
             return jsonDate;
             // return jsonDate.splice(10, 1, "000");
         }
