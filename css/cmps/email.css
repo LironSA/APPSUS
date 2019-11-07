@@ -27,6 +27,15 @@
     text-decoration: none;
 }
 
+.soon-img {
+    height: 90vh;
+    width: 90wh;
+    align-items: center;
+}
+
+
+/* ----- EMAIL NEW ----- */
+
 .compose {
     border-radius: 10px;
     background: rgb(0, 60, 255);
@@ -39,7 +48,6 @@
 }
 
 
-/* ----- EMAIL NEW ----- */
 
 .new-email {
     margin: 0 10px 10px 10px;
