@@ -2,12 +2,24 @@
 
 .add-note {
     border: black solid 2px;
-    margin: 5px;
-    padding: 5px;
+    margin: 20px;
+    padding: 10px;
     width: 70%;
     height: 50px;
 
+
+
+
+
+
+
+
+
+  
     
+
+
+    /* coppied from emails */
     align-content: center;
     text-align: center;
 }

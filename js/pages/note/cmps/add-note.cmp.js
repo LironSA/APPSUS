@@ -2,7 +2,7 @@
 
 export default {
     template: `
-        <form class="add-note">
+        <form class="add-note flex justify-center">
             <input id="addNote" type="text" placeholder="currPlaceholder">    
             <select id="selectNoteType" v-model="noteType">
             <option value="txt">text</option>
