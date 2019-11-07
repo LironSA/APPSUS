@@ -25,15 +25,9 @@ export default {
                 console.log('notes from service', notes);
                 this.notes = notes
             })
-        // LS:
-        // eventBus.$on('removeNote', (id) => {
-        //     this.removeNote(id)
-        // })
-        // eventBus.$on('filterNote', (newSettings) => {
-        //     this.filterBy[newSettings.key] = newSettings.val
-        // })
-        // eventBus.$on('setNoteProperty', (newSettings) => {
-        //     noteService.setNoteProperty (newSettings)
-        // })
+        eventBus.$on('bgcChange', (data) => {
+           noteService.setNoteProperty(data)
+        })
+       
     }
 }
