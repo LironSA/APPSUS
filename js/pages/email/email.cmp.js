@@ -33,40 +33,32 @@ export default {
 
     computed: {
         filteredEmails() {
-            let emails = this.emails
-            let type = this.filterBy.type
-            let selcet = this.filterBy.selectVal
-            let search = this.filterBy.txtSearch
-            console.log('emails>', emails);
-            console.log('type>', this.filterBy.type, 'WTF');
-            console.log('selcet>', selcet);
-            console.log('search>', search);
-            if (!type && !selcet && !search) {
-                return emails
+            if (!this.filterBy.type && !this.filterBy.selectVal && !this.filterBy.txtSearch) {
+                return this.emails
             } else {
-
-
-                let filteredEmails = emails
-                if (type) {
+                let filteredEmails = this.emails
+                if (this.filterBy.type) {
                     filteredEmails = filteredEmails.filter(email => {
-                        let filter = 'is' + type
-                        return email.filter === true
+                        let filter = 'is' + this.filterBy.type
+                        return email[filter] === true
                     })
                 }
-                if (select) {
-                    if (selcet === 'isRead') {
+                if (this.filterBy.selectVal) {
+                    if (this.filterBy.selectVal === 'isRead') {
                         filteredEmails = filteredEmails.filter(email => {
-                            return email.isRead === true
+                            return email.isRead===true
                         })
                     } else {
                         filteredEmails = filteredEmails.filter(email => {
-                            return email.isRead === false
+                            return email.isRead===false
                         })
                     }
                 }
-                if (search) {
-                    let regex = new RegExp(`${search}`, 'i');
-                    filteredEmails = filteredEmails.filter(book => regex.test(book.title))
+                if (this.filterBy.txtSearch) {
+                    let regex = new RegExp(`${this.filterBy.txtSearch}`, 'i');
+                    filteredEmails = filteredEmails.filter(email => {
+                        return regex.test(email.body)
+                    })
                 }
                 return filteredEmails
             }
@@ -75,14 +67,11 @@ export default {
     watch: {
         '$route.params.type'() {
             let emailType = this.$route.params.type
-            console.log('type from url',emailType);
             if (emailType === 'Inbox') {
                 this.filterBy.type = ''
             } else {
-                console.log('got here!123');
                 this.filterBy.type = emailType
             }
-            console.log('filter type changed to',  this.filterBy.type);
         }
     }
 
