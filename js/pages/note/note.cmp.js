@@ -21,10 +21,10 @@ export default {
 
     created() {
         noteService.getNotes()
-        .then(notes => {
-            console.log('notes from service', notes);
-            this.notes = notes
-        })
+            .then(notes => {
+                console.log('notes from service', notes);
+                this.notes = notes
+            })
         // LS:
         // eventBus.$on('removeNote', (id) => {
         //     this.removeNote(id)

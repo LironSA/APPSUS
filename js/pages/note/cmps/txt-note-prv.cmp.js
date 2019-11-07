@@ -1,6 +1,6 @@
 'use strict'
 
-import notePrvMenue from  './note-prv-menu.cmp.js';
+import notePrvMenu from  './note-prv-menu.cmp.js';
 
 
 export default {
@@ -11,7 +11,7 @@ export default {
     </section>
      `,
     components: {
-        notePrvMenue
+        notePrvMenu
     } 
 }
 

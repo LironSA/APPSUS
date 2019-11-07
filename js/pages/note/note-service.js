@@ -35,10 +35,10 @@ function removeNotes(id) {
 
 
 const DEFUALT_NOTES = [
-    { id: makeId(), type: 'p', content: 'Lorem ipsum, dolor sit amet, consectetur, adipisicing elit. Facilis, corporis!', isPinned: true,  style: { color: '#fff', 'background-color': '#22546', 'font-size': '10px' }, createdAt: 1554580930594 },
-    { id: makeId(), type: 'ul', content: 'Lorem ipsum, dolor sit amet, consectetur adipisicing, elit. Facilis, corporis!', isPinned: true,  style: { color: '#fff', 'background-color': '#22546', 'font-size': '10px' }, createdAt: 1664580930594 },
-    { id: makeId(), type: 'p', content: 'onsectetur adipisicing elit. Facilis, corporis!', isPinned: true, style: { color: '#fff', 'background-color': '#22546', 'font-size': '10px' }, createdAt: 1554580930594 },
-    { id: makeId(), type: 'ul', content: 'r sit, amet consectetur, adipisicing elit. Facilis, corporis!', isPinned: true,  style: { color: '#fff', 'background-color': '#22546', 'font-size': '10px' }, createdAt: 1664580930594 },
+    { id: makeId(), type: 'txt-note-prv', content: 'Lorem ipsum, dolor sit amet, consectetur, adipisicing elit. Facilis, corporis!', isPinned: true, style: { color: '#fff', 'background-color': '#22546', 'font-size': '10px' }, createdAt: 1554580930594 },
+    { id: makeId(), type: 'todo-note-prv', content: 'Lorem ipsum, dolor sit amet, consectetur adipisicing, elit. Facilis, corporis!', isPinned: true, style: { color: '#fff', 'background-color': '#22546', 'font-size': '10px' }, createdAt: 1664580930594 },
+    { id: makeId(), type: 'txt-note-prv', content: 'onsectetur adipisicing elit. Facilis, corporis!', isPinned: true, style: { color: '#fff', 'background-color': '#22546', 'font-size': '10px' }, createdAt: 1554580930594 },
+    { id: makeId(), type: 'todo-note-prv', content: 'r sit, amet consectetur, adipisicing elit. Facilis, corporis!', isPinned: true, style: { color: '#fff', 'background-color': '#22546', 'font-size': '10px' }, createdAt: 1664580930594 },
 ]
 
 getNotes()
