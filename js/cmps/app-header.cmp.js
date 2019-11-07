@@ -1,11 +1,12 @@
 import userMsg from './user-msg.cmp.js'
-
+import emailFilter from '../pages/email/cmps/email-filter.cmp.js'
 
 
 export default {
     template: `
-    <header class="app-header flex space-between">
+    <header class="app-header flex space-around">
         <h1 class="header-logo"> ✨ Apps Place </h1>
+        <email-filter></email-filter>
         <button style="background: none; border: none" class="toggle-menu" @click="toggleMenu">
             <img src="img/menu.JPG" alt=""></button>
         <!-- <router-link to="/about">About</router-link> -->
@@ -35,6 +36,7 @@ export default {
         }
     },
     components: {
-        userMsg
+        userMsg,
+        emailFilter
     }
 }
