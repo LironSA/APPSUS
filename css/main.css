@@ -1,11 +1,15 @@
-/* Email styles */
-@import './base.css';
+/* Both Apps Styles */
+@import './cmps/user-msg.css';
 @import './fonts.css';
 @import './helpers.css';
 @import './cmps/app-header.css';
 @import './cmps/app-footer.css';
+@import './base.css';
+
+
+
+/* Email styles */
 @import './cmps/email.css';
-@import './cmps/user-msg.css';
 
 
 

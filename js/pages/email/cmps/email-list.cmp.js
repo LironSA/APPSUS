@@ -5,7 +5,7 @@ export default {
     template: `
     
         <ul class="email-list clean-list">
-            <email-preview v-for="email in emails" :key="email.id" v-bind:email="email">
+            <email-preview v-for="email in emails" :key="email.id" :email="email">
             </email-preview>
         </ul>
     `,
