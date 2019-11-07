@@ -3,7 +3,7 @@ import newMailCmp from './pages/email/cmps/new-mail.cmp.js'
 import emailList from './pages/email/cmps/email-list.cmp.js'
 import commingSoon from './pages/comming-soon.cmp.js'
 
-import keepCmp from './pages/keep/keep.cmp.js'
+import noteCmp from './pages/note/note.cmp.js'
 
 let myRoutes = [
     {
@@ -29,8 +29,8 @@ let myRoutes = [
         component: commingSoon
     },
     {
-        path: '/keep',
-        component: keepCmp
+        path: '/note',
+        component: noteCmp
     },
 
 ]
