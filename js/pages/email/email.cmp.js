@@ -38,16 +38,20 @@ export default {
                 // console.log("ID is here!!!",id)
             })
         }
-        
+
     },
     created() {
         emailService.getEmails()
             .then(emails => {
                 this.emails = emails
             })
-        eventBus.$on('removeEmail', (id)=>{
-            this.removeEmail(id)    
-            })
+        eventBus.$on('removeEmail', (id) => {
+            this.removeEmail(id)
+        })
+        eventBus.$on('filterChange', (newSettings) => {
+            this.filterBy[newSettings.key] = newSettings.val
+
+        })
 
     },
 
@@ -66,11 +70,13 @@ export default {
                 if (this.filterBy.selectVal) {
                     if (this.filterBy.selectVal === 'isRead') {
                         filteredEmails = filteredEmails.filter(email => {
-                            return email.isRead===true
+                            return email.isRead === true
                         })
                     } else {
+                        console.log('select val else');
                         filteredEmails = filteredEmails.filter(email => {
-                            return email.isRead===false
+                            console.log(email.isRead);
+                            return email.isRead === false
                         })
                     }
                 }
