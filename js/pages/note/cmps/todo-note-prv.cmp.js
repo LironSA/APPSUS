@@ -12,7 +12,7 @@ export default {
         }
     },
     created() {
-        this.todos = this.note.split(',')
+        this.todos = this.note.content.split(',')
     }
 
 }
