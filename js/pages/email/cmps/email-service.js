@@ -16,6 +16,8 @@ function getEmails() {
         emails = DEFUALT_EMAILS
         storageService.store(EMAILS_KEY, emails)
         gEmails = emails;
+    }else{
+        gEmails = emails;
     }
     return Promise.resolve(gEmails)
 }
