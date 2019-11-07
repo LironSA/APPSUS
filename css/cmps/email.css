@@ -47,8 +47,6 @@
     margin-bottom: 60px;
 }
 
-
-
 .new-email {
     margin: 0 10px 10px 10px;
     border:gray 1px solid;
@@ -92,14 +90,39 @@
 
 /* ----- EMAIL PREVIEW ----- */
 
+.email-filter {
+    width: 30%;
+}
+
+.email-filter input{
+    width: 70%;
+    height: 30px;
+    border-radius: 5px;
+    padding: 10px;
+    background: rgb(188, 189, 185);
+    color: black;
+    font-size: 1.2rem;
+}
+
+.email-filter select{
+    width: 25%;
+    height: 30px;
+    border-radius: 5px;
+    padding-left: 5px;
+    background: rgb(188, 189, 185);
+    color: black;
+    font-size: 1rem;
+    border: white 1px solid;
+}
+
+
+/* ----- EMAIL PREVIEW ----- */
+
 .preview-container {
     width: 100%;
 }
 
 .prev-list {
-    /* width: 20%;
-    float: left;
-    flex-direction: row; */
     border-bottom: rgb(231, 228, 228) 2px solid;
     height: 50px;
 }
@@ -124,3 +147,8 @@
 }
 
 
+
+
+.selectedEmail {
+    font-weight: 50;
+}

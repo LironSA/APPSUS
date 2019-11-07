@@ -7,9 +7,11 @@ import { eventBus } from "../../../services/event-bus.service.js";
 export default {
     props: ['email'],
     template: `
-    <section class="preview-container" v-if="email" @click="emailClicked">
+    <section class="preview-container" v-if="email" @click="emailClicked(email.id)">
         <li class="prev-list flex">
-            <h4 class="prev-name">{{email.receivedFrom.name}}</h4>
+            <!-- // ISREAD - to add method that recognizes the readqunread, -->
+            <h4 class="prev-name" v-bind:class="{selectedEmail:email.isRead}"      
+                >{{email.receivedFrom.name}}</h4>
             <h4 class="prev-subj">{{email.subject}} - 
                 <a>{{email.body}}</a></h4> 
             <h4 class="prev-sent">{{timeToShow}}</h4>
@@ -45,13 +47,16 @@ export default {
         }
     },
     methods: {
-        emailClicked() {
+        emailClicked(id) {
             this.isSelected = !this.isSelected;
+            this.setEmailProperty(id, 'isRead', 'true')
         },
         removeEmail(id){
             eventBus.$emit('removeEmail',id)
+        },
+        setEmailProperty (id, prop, val) {
+            var data = {id, prop, val}
+            eventBus.$emit('setEmailProperty',data) 
         }
-       
     }
-     
 }

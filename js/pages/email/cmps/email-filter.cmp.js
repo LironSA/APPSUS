@@ -1,13 +1,14 @@
 'use strict';
 import { eventBus } from "../../../services/event-bus.service.js";
+
 export default {
     template: `
-                <section class="email-filter">
-                <input id="txtSearch"type="text" placeholder="search email" @input="setFilter">    
+                <section class="email-filter flex space-around">
+                <input id="txtSearch"type="text" placeholder="Search email" @input="setFilter">    
                 <select id="selectVal" @change="setFilter">
                 <option value="">All</option>
                 <option value="isRead">Read</option>
-                <option value="UnRead">UnRead</option>
+                <option value="UnRead">Unread</option>
                 </select>
                 </section>
 

@@ -4,7 +4,8 @@ import { makeId } from '../../../services/util-service.js'
 
 export const emailService = {
     getEmails,
-    removeEmail
+    removeEmail,
+    setEmailProperty
 }
 const EMAILS_KEY = 'emails'
 
@@ -31,6 +32,16 @@ function removeEmail(id) {
     }  
     storageService.store(EMAILS_KEY, gEmails)
     return Promise.resolve();
+}
+// {id, prop, val}
+function setEmailProperty(data) {
+    var idx = gEmails.findIndex(email => email.id === data.id);
+    if (idx !== -1){
+        console.log("data:", data)
+        gEmails[idx][data.prop] = data.val
+        storageService.store(EMAILS_KEY, gEmails)
+        // return Promise.resolve();
+    }
 }
 
 

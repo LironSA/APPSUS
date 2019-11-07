@@ -50,9 +50,10 @@ export default {
         })
         eventBus.$on('filterChange', (newSettings) => {
             this.filterBy[newSettings.key] = newSettings.val
-
         })
-
+        eventBus.$on('setEmailProperty', (newSettings) => {
+            emailService.setEmailProperty (newSettings)
+        })
     },
 
     computed: {
