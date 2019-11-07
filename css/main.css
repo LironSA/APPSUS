@@ -1,3 +1,4 @@
+/* Email styles */
 @import './base.css';
 @import './fonts.css';
 @import './helpers.css';
@@ -5,3 +6,8 @@
 @import './cmps/app-footer.css';
 @import './cmps/email.css';
 @import './cmps/user-msg.css';
+
+
+
+/* Notes styles */
+@import './cmps/notes.css';

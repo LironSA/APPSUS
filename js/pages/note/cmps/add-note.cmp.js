@@ -2,8 +2,8 @@
 
 export default {
     template: `
-        <section class="add-note">
-            <input id="addNote" type="text" placeholder="currPlaceholder" @input="addTxtNote">    
+        <section class="add-note flex">
+            <input id="addNote" type="text" :placeholder="currPlaceholder" @input="addTxtNote">    
             <select id="selectNoteType" v-model="noteType">
             <option value="txt">text</option>
             <option value="list">todo</option>
@@ -26,7 +26,8 @@ export default {
             if (this.noteType === 'list') 
                 placeholder = "Enter your TODO list";
 
-            return placeholder
-        }
+                console.log('placeholder: ', placeholder)
+                return placeholder
+            }
     }
 }
