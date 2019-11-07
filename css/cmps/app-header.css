@@ -1,34 +1,49 @@
 .app-header {
     font-family: Indie Flower, sans-serif;
-    background-color: lightgoldenrodyellow;
+    background-color: orange;
     padding: 2px;
-    /* margin: 5px; */
     border: blueviolet 1px solid;
     text-align: center;
     width: 100%;
-    margin: 10px;
+    margin-top: 5px;
+    align-items: center;
 }
+
+.toggle-menu img {
+    height: 60px;
+    width: 60px;
+    background: none;
+    border: black 1px solid;
+    margin: 1px;
+}
+
+.toggle-menu img:hover {
+    cursor: pointer;
+}
+
+
+/* .toggle-menu button {
+    background: none;
+    border: none;
+} */
+
 
 .header-logo {
     width: 40%;
 }
 
 .nav-header {
-    width: 320px;
+    width: 30%;
     align-items: center;
     font-size: 1.5rem;
     position: absolute;
     right: 100px;
+    top: 0;
     border: blueviolet 1px solid;
-    background:white
+    background:white;
+    padding: 10px;
 }
 
 img.nav-header{
-    height: 100px;
-    width: 100px;
-}
-
-.menu-img {
-    height: 80px;
-    width: 80px;
+    background-color: orange;
 }

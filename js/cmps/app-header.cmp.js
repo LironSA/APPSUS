@@ -5,11 +5,12 @@ import userMsg from './user-msg.cmp.js'
 export default {
     template: `
     <header class="app-header flex space-between">
-        <h1 class="header-logo"> Apps Place </h1>
-        <button @click="toggleMenu"><img class="menu-img" src="img/menu.JPG" alt=""></button>
+        <h1 class="header-logo"> ✨ Apps Place </h1>
+        <button style="background: none; border: none" class="toggle-menu" @click="toggleMenu">
+            <img src="img/menu.JPG" alt=""></button>
         <!-- <router-link to="/about">About</router-link> -->
         <nav class="nav-header flex wrap" v-if="isOpenMenu">
-            <router-link to="/email/list/inbox"><img src="img/email-origin.JPG" alt=""> </router-link> 
+            <router-link to="/email/list/inbox"><img src="img/email-origin.JPG" alt=""></router-link> 
             <router-link to="/notes"><img src="img/notes_origin.JPG" alt=""> </router-link> 
             <router-link to="/coming-soon"><img src="img/maps.JPG" alt=""> </router-link> 
             <router-link to="/coming-soon"><img src="img/calander.JPG" alt=""> </router-link> 
@@ -20,6 +21,7 @@ export default {
             <router-link to="/coming-soon"><img src="img/news.JPG" alt=""> </router-link> 
         </nav>
     </header>
+    
     
     `,
     data() {

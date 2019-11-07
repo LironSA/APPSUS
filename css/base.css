@@ -29,3 +29,9 @@ body{
 .app-header {
     height: 10%;
 }
+
+.soon-img {
+    height: 80%;
+    width: 80%;
+    text-align: center;
+}

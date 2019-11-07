@@ -12,17 +12,30 @@
 
 .email-menu-link{
     width: 100%;
+    height: 30%;
     text-align: center;
-    margin: 10px;
-    list-style-type: none;
+    margin: 15px;
+    color: orange;
+    font-size: 1.3rem;
+}
+
+.email-menu-link:hover{
+    background: rgb(0, 60, 255);
+    color: yellow;
+    border-radius: 10px;
+    width: 80%;
+    text-decoration: none;
 }
 
 .compose {
     border-radius: 10px;
-    height: 40px;
-    width: 200px;
-    background: red;
-    align-items: center;
+    background: rgb(0, 60, 255);
+    color: orange;
+    padding: 8%;
+    width: 80%;
+    text-decoration: none;
+    font-size: 1.7rem;
+    margin-bottom: 60px;
 }
 
 
@@ -48,21 +61,21 @@
 }
 
 .new-email h2 {
-    /* width: 30%; */
-    padding: 10px;
+    padding: 5px;
     right: 0;
-    margin: 10px;
+    margin: 5px;
     font-size: 1rem;
 }
 
 .new-email textarea {
-    height: 200px;
+    height: 30%;
+    margin: 2%;
     width: 95%;
-    margin: 20px;
+    margin: 20%S;
 }
 
 
-/* ----- EMAIL PREVIEW ----- */
+/* ----- EMAIL LIST ----- */
 
 .email-list {
     width: 80%;
@@ -75,10 +88,12 @@
     width: 100%;
 }
 
-.preview-list {
-    width: 20%;
+.prev-list {
+    /* width: 20%;
     float: left;
-    flex-direction: row;
+    flex-direction: row; */
+    border-bottom: rgb(231, 228, 228) 2px solid;
+    height: 50px;
 }
 
 .prev-name {
@@ -86,11 +101,14 @@
     width: 20%;
 }
 .prev-subj {
-    width: 70%;
+    width: 65%;
+}
+.prev-subj a{
+    color: gray ;
 }
 .prev-sent {
-    width: 10%;
-    margin-right: 5%;
+    margin-right: 2%;
+    width: 15%;
 }
 
 

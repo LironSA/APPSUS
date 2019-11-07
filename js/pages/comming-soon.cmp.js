@@ -1,6 +1,6 @@
 export default {
     template: `
-        <section>
+        <section class="soon-img">
             <img src="img/canstockphoto.jpg"> 
         </section>
     `,
