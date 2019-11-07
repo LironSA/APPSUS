@@ -2,7 +2,8 @@
 import { storageService } from '../../../services/util-service.js'
 import{makeId}  from '../../../services/util-service.js'
 export const emailService = {
-    getEmails
+    getEmails,
+    removeEmail
 }
 const EMAILS_KEY = 'emails'
 function getEmails() {
@@ -13,6 +14,18 @@ function getEmails() {
     }
     return Promise.resolve(emails)
 }
+
+
+
+function removeEmail(id) {
+    var idx = emails.findIndex(email =>email.id === id);
+    if (idx !== -1)  emails.splice(idx, 1)
+    storageService.store(EMAILS_KEY, emails)
+    return Promise.resolve();
+}
+
+
+
 
 const DEFUALT_EMAILS = [
     { id: makeId(), sentTo: { to: [], cc: [], bcc: [] }, receivedFrom: { name: 'Jack', addr: 'Jack@gmail.com' }, subject: 'Wassap with Vue?', body: 'May I',isDraft:true, isRead: false, sentAt: 1554580930594 },

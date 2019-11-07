@@ -1,6 +1,8 @@
 'use strict';
 import emailMenu from './cmps/email-menu.cmp.js'
 import { emailService } from './cmps/email-service.js';
+import { eventBus } from "../../services/event-bus.service.js";
+
 
 
 export default {
@@ -24,11 +26,21 @@ export default {
             }
         }
     },
+    methods: {
+        removeEmail(id) {
+            console.log("ID got to email comp: ", id)
+        }
+        
+    },
     created() {
         emailService.getEmails()
             .then(emails => {
                 this.emails = emails
             })
+        eventBus.$on('removeEmail', (id)=>{
+            this.removeEmail(id)    
+            })
+
     },
 
     computed: {
