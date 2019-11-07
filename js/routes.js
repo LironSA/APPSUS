@@ -30,7 +30,7 @@ let myRoutes = [
     },
     {
         path: '/keep',
-        component: keepCmp
+        component: keepCmp,
     },
 
 ]
