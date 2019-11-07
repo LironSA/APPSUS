@@ -104,6 +104,10 @@
     height: 50px;
 }
 
+.prev-list:hover {
+    cursor: pointer;
+}
+
 .prev-name {
     margin-left: 5%;
     width: 20%;

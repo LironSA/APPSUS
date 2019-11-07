@@ -14,6 +14,8 @@ export default {
         selectedIds: [],
         }
     },
+   
+
     components: {
         emailPreview
     }
