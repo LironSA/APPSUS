@@ -28,17 +28,16 @@ export default {
     },
     methods: {
         removeEmail(id) {
-            emailService.removeEmail(id) 
-            .then(()=>{
-                const msg = {
-                    txt: `email id:(${id}) Deleted Succefully `,
-                    type: 'success'
-                }
-                eventBus.$emit('show-msg', msg)
-                // console.log("ID is here!!!",id)
-            })
+            emailService.removeEmail(id)
+                .then(() => {
+                    const msg = {
+                        txt: `email id:(${id}) Deleted Succefully `,
+                        type: 'success'
+                    }
+                    eventBus.$emit('show-msg', msg)
+                    // console.log("ID is here!!!",id)
+                })
         }
-
     },
     created() {
         emailService.getEmails()
@@ -59,7 +58,10 @@ export default {
     computed: {
         filteredEmails() {
             if (!this.filterBy.type && !this.filterBy.selectVal && !this.filterBy.txtSearch) {
-                return this.emails
+                return this.emails.filter(email => {
+                    console.log(email.isRead);
+                    return email.isSent === false
+                })
             } else {
                 let filteredEmails = this.emails
                 if (this.filterBy.type) {
@@ -74,9 +76,7 @@ export default {
                             return email.isRead === true
                         })
                     } else {
-                        console.log('select val else');
                         filteredEmails = filteredEmails.filter(email => {
-                            console.log(email.isRead);
                             return email.isRead === false
                         })
                     }
