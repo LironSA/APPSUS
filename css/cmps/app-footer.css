@@ -1,8 +1,9 @@
 .app-footer {
     font-family: Indie Flower, sans-serif;
     font-size: 1.3rem;
+    background-color: rgb(204, 15, 211);
+    border-radius: 10px;
     font-weight: 700;
-    background-color: orange;
     padding: 2px;
     border: blueviolet 1px solid;
     text-align: center;
