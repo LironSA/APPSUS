@@ -6,6 +6,7 @@ import { makeId } from '../../services/util-service.js'
 export const noteService = {
     getNotes,
     removeNote,
+    togglePinNote,
     setNoteProperty,
     addNote,
 }
@@ -48,6 +49,17 @@ function removeNote(id) {
     if (idx !== -1) {
         let note = gNotes.splice(idx, 1)
         console.log('note:', note);
+    }
+    storageService.store(NOTES_KEY, gNotes)
+    return Promise.resolve();
+}
+
+function togglePinNote(id) {
+    var idx = gNotes.findIndex(note => note.id === id);
+    if (idx !== -1) {
+        console.log('pinned status: ', gNotes[idx].isPinned)
+        gNotes[idx].isPinned = !gNotes[idx].isPinned
+        console.log('pinned after: ', gNotes[idx].isPinned)
     }
     storageService.store(NOTES_KEY, gNotes)
     return Promise.resolve();

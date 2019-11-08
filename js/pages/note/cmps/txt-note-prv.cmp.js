@@ -9,6 +9,7 @@ export default {
     <section class="txt-note-prv-container" v-if="note" :style="bgColor">
         <p>{{note.content}}</p>
         <note-prv-menu :note='note'> </note-prv-menu>
+        <h1 v-if="note.isPinned">TEST for isPinned</h1>
     </section>
      `,
     computed: {
