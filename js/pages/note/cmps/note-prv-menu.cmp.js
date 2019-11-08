@@ -6,7 +6,7 @@ import styleModal from './note-style-modal.cmp.js'
 export default {
     props: ['note'],
     template: `
-            <section class="note-list-container">
+            <section>
                 <button @click="toggleStyleModal">Color</button>
                 <style-modal v-if="isModalActive" :noteId="note.id"></style-modal>   
             </section>
@@ -27,6 +27,9 @@ export default {
     },
     components: {
         styleModal
+    },
+    created() {
+        console.log('MENU CREATED')
     }
 
 }
