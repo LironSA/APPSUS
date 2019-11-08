@@ -4,7 +4,7 @@ import addNote from './cmps/add-note.cmp.js'
 import noteList from './cmps/note-list.cmp.js'
 export default {
     template: `
-            <section class="notes-app-container flex justify-center">
+            <section class="notes-app-container flex justify-center col">
             <add-note></add-note>
             <note-list v-if="notes":notes="notes"></note-list>
             </section>
