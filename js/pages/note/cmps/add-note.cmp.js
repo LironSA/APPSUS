@@ -3,7 +3,7 @@
 export default {
     template: `
         <form @submit.prevent="addNote" class="add-note flex justify-center">
-            <input id="addNote" type="text" placeholder="currPlaceholder" noteData.content>    
+            <input id="addNote" type="text" placeholder="currPlaceholder" v-model="noteData.content">    
             <select id="selectNoteType" v-model="noteData.noteType">
             <option value="txt-note-prv">text</option>
             <option value="todo-note-prv">todo</option>

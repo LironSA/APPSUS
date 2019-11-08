@@ -7,7 +7,7 @@ export default {
     props: ['note'],
     template: `
     <section class="txt-note-prv-container" v-if="note" :style="bgColor">
-        <p>{{note}}</p>
+        <p>{{note.content}}</p>
         <note-prv-menu :note='note'> </note-prv-menu>
     </section>
      `,

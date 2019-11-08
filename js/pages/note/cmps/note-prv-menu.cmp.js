@@ -13,7 +13,7 @@ export default {
                 <style-modal v-if="isModalActive" :noteId="note.id"></style-modal>   
             </section>
     `,
-    
+
     data() {
         return {
             isModalActive: false
@@ -29,11 +29,6 @@ export default {
     components: {
         styleModal
     },
-
-    created() {
-        console.log('MENU CREATED')
-    }
-
 }
 
 
