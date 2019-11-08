@@ -3,11 +3,13 @@
 import styleModal from './note-style-modal.cmp.js'
 
 
+
 export default {
     props: ['note'],
     template: `
             <section>
-                <button @click="toggleStyleModal">Color</button>
+                <button class="note-color-btn" @click="toggleStyleModal" >
+                <i class="fa fa-palette"></i></button>
                 <style-modal v-if="isModalActive" :noteId="note.id"></style-modal>   
             </section>
     `,
@@ -23,11 +25,11 @@ export default {
             this.isModalActive = !this.isModalActive;
         },
 
-
     },
     components: {
         styleModal
     },
+
     created() {
         console.log('MENU CREATED')
     }
