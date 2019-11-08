@@ -7,7 +7,8 @@ export default {
     template: `
             <section class="notes-app-container flex justify-center col">
             <add-note @addNote="addNote"></add-note>
-            <note-list v-if="notes":notes="notes"></note-list>
+            <note-list v-if="pinnedNotes.length>0":notes="pinnedNotes"></note-list>
+            <note-list v-if="unPinnedNotes.length>0":notes="unPinnedNotes"></note-list>
             </section>
             `,
     components: {
@@ -37,6 +38,18 @@ export default {
             console.log(note, 'note in note.cmp');
             noteService.addNote(note)
         },
-        
+
+    },
+    computed: {
+        pinnedNotes() {
+            return this.notes.filter(note => {
+                return note.isPinned
+            })
+        },
+        unPinnedNotes() {
+            return this.notes.filter(note => {
+                return !note.isPinned
+            })
+        }
     }
 }

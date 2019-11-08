@@ -6,7 +6,7 @@ import notePrvMenu from './note-prv-menu.cmp.js';
 export default {
     props: ['note'],
     template: `
-        <section class="todo-not-prv" :style="bgColor">
+        <section class="todo-not-prv  flex align-center justify-center" :style="bgColor">
                 <ul v-if="todos.length>0"  >
                     <li v-for="(todo,idx) in todos" :key="idx" :class="{'line-through':todo.isDone}" @click="toggleIsDone(todo)">{{todo.txt}}</li>
                 </ul>
