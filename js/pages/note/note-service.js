@@ -6,6 +6,7 @@ import { makeId } from '../../services/util-service.js'
 export const noteService = {
     getNotes,
     removeNotes,
+    setNoteProperty
 }
 const NOTES_KEY = 'notes'
 
@@ -32,6 +33,18 @@ function removeNotes(id) {
     storageService.store(NOTES_KEY, gNotes)
     return Promise.resolve();
 }
+
+// {id, prop, val}
+function setNoteProperty(data) {
+    var idx = gNotes.findIndex(note => note.id === data.id);
+    if (idx !== -1){
+        console.log("data:", data)
+        gNotes[idx][data.prop] = data.val
+        storageService.store(NOTES_KEY, gNotes)
+        // return Promise.resolve();
+    }
+}
+
 
 
 const DEFUALT_NOTES = [
