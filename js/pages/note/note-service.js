@@ -36,11 +36,12 @@ function addNote(noteObj) {
     }
     gNotes.unshift(note)
     storageService.store(NOTES_KEY, gNotes)
+    console.log('here' ,note);
     const msg = {
         txt: `Added to notes`,
         type: 'success'
     }
-    return Promise.resolve(msg)
+    // return Promise.resolve(msg)
 }
 function removeNotes(id) {
     var idx = gNotes.findIndex(note => note.id === id);
@@ -66,10 +67,10 @@ function setNoteProperty(data) {
 
 
 const DEFUALT_NOTES = [
-    { id: makeId(), type: 'txt-note-prv', content: 'Lorem ipsum, dolor sit amet, consectetur, adipisicing elit. Facilis, corporis!', isPinned: true,'backgroundColor': '#fff', createdAt: 1554580930594 },
-    { id: makeId(), type: 'todo-note-prv', content: 'Lorem ipsum, dolor sit amet, consectetur adipisicing, elit. Facilis, corporis!', isPinned: true, 'backgroundColor': '#fff', createdAt: 1664580930594 },
-    { id: makeId(), type: 'txt-note-prv', content: 'onsectetur adipisicing elit. Facilis, corporis!', isPinned: true, 'backgroundColor': '#22546', createdAt: 1554580930594 },
-    { id: makeId(), type: 'todo-note-prv', content: 'r sit, amet consectetur, adipisicing elit. Facilis, corporis!', isPinned: true, 'backgroundColor': '#fff', createdAt: 1664580930594 },
+    { id: makeId(), type: 'txt-note-prv', content: 'Lorem ipsum, dolor sit amet, consectetur, adipisicing elit. Facilis, corporis!', isPinned: true,'backgroundColor': 'yellow', createdAt: 1554580930594 },
+    { id: makeId(), type: 'todo-note-prv', content: 'Lorem ipsum, dolor sit amet, consectetur adipisicing, elit. Facilis, corporis!', isPinned: true, 'backgroundColor': 'pink', createdAt: 1664580930594 },
+    { id: makeId(), type: 'txt-note-prv', content: 'onsectetur adipisicing elit. Facilis, corporis!', isPinned: true, 'backgroundColor': 'blue', createdAt: 1554580930594 },
+    { id: makeId(), type: 'todo-note-prv', content: 'r sit, amet consectetur, adipisicing elit. Facilis, corporis!', isPinned: true, 'backgroundColor': 'red', createdAt: 1664580930594 },
 ]
 
 getNotes()
