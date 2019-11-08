@@ -1,5 +1,5 @@
 'use strict';
-
+import { eventBus } from "../../../services/event-bus.service.js";
 export default {
     template: `
                 <section class="new-email">
@@ -13,13 +13,12 @@ export default {
                     <section>
                         <button @click="sendEmail">Send</button>
                         <button @click="draftEmail">Draft</button>
-                        <button @click="removeEmail">Delete</button>
 
                     </section>            
                 </section>            
     `,
-    data(){
-        return{
+    data() {
+        return {
             emailData: {
                 sentTo: '',
                 sentToCc: '',
@@ -29,19 +28,25 @@ export default {
             }
         }
     },
-    created(){
-        console.log('New mail created');
-        
+    created() {
+        eventBus.$on('editDraft', email => {
+            this.emailData.sentTo = (email.sentTo.to.length !== 0) ? email.sentTo.to.map(str => { return str }) : ''
+            this.emailData.sentToCc = (email.sentTo.cc.length !== 0) ? email.sentTo.cc.map(str => { return str }) : ''
+            this.emailData.sentToBcc = (email.sentTo.bcc.length !== 0) ? email.sentTo.bcc.map(str => { return str }) : ''
+            this.emailData.subject = email.subject
+            this.emailData.body = email.body
+
+        })
+
     },
-    methods:{
-        removeEmail(){
+    methods: {
+        draftEmail() {
             //todo
+            eventBus.$emit('draftEmail', this.emailData)
         },
-        draftEmail(){
+        sendEmail() {
             //todo
-        },
-        sendEmail(){
-            //todo
+            eventBus.$emit('sendEmail', this.emailData)
         }
     }
 }

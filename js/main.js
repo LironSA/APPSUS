@@ -10,7 +10,7 @@ let app = {
     template:
         `   <div class="main-container">
                 <app-header></app-header>
-                <router-view style="height: 80%; overflow: scroll;"></router-view>
+                <router-view style="height: 80%; overflow:hidden;"></router-view>
                 <app-footer></app-footer>
             </div>
         `

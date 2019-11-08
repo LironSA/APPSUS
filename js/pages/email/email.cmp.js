@@ -29,13 +29,8 @@ export default {
     methods: {
         removeEmail(id) {
             emailService.removeEmail(id)
-                .then(() => {
-                    const msg = {
-                        txt: `email id:(${id}) Deleted Succefully `,
-                        type: 'success'
-                    }
+                .then((msg) => {
                     eventBus.$emit('show-msg', msg)
-                    // console.log("ID is here!!!",id)
                 })
         }
     },
@@ -51,7 +46,19 @@ export default {
             this.filterBy[newSettings.key] = newSettings.val
         })
         eventBus.$on('setEmailProperty', (newSettings) => {
-            emailService.setEmailProperty (newSettings)
+            emailService.setEmailProperty(newSettings)
+        })
+        eventBus.$on('draftEmail', (email) => {
+            emailService.draftEmail(email)
+                .then((msg) => {
+                    eventBus.$emit('show-msg', msg)
+                })
+        })
+        eventBus.$on('sendEmail', (email) => {
+            emailService.sendEmail(email)
+                .then((msg) => {
+                    eventBus.$emit('show-msg', msg)
+                })
         })
     },
 
