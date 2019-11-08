@@ -29,6 +29,9 @@ export default {
         eventBus.$on('bgcChange', (data) => {
             noteService.setNoteProperty(data)
         })
+        eventBus.$on('togglePinNote', (id) => {
+            noteService.togglePinNote(id)
+        })
         eventBus.$on('removeNote', (id) => {
             noteService.removeNote(id)
         })

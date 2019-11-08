@@ -21,7 +21,6 @@ export default {
         toggleStyleModal() {
             this.isModalActive = !this.isModalActive
         },
-
         onBgcChange(ev) {
             let color = ev.target.value
             console.log('color: ', color)

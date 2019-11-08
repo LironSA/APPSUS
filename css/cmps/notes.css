@@ -26,23 +26,40 @@
 }
 
 
-.note-color-btn {
+.note-color-btn img {
     margin-right: 2px;
     height: 30px;
     width: 30px;
     float: left;
 }
 
-.note-delete-btn {
+.note-delete-btn img{
     margin-right: 2px;
     height: 30px;
     width: 30px;
     bottom: 0;
+    float: left;
+}
+
+.note-pinned-btn img{
+    margin-right: 2px;
+    height: 30px;
+    width: 30px;
+    bottom: 0;
+    float: left;
 }
 
 
+.imgBtn {
+    height: 20px;
+    width: 20px;
+
+}
 
 
+.single-note {
+    padding: 10px;
+}
 
 
 
