@@ -5,7 +5,7 @@ import { makeId } from '../../services/util-service.js'
 
 export const noteService = {
     getNotes,
-    removeNotes,
+    removeNote,
     setNoteProperty,
     addNote,
 }
@@ -43,7 +43,7 @@ function addNote(noteObj) {
     }
     // return Promise.resolve(msg)
 }
-function removeNotes(id) {
+function removeNote(id) {
     var idx = gNotes.findIndex(note => note.id === id);
     if (idx !== -1) {
         let note = gNotes.splice(idx, 1)

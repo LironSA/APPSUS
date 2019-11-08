@@ -28,7 +28,9 @@ export default {
         eventBus.$on('bgcChange', (data) => {
             noteService.setNoteProperty(data)
         })
-
+        eventBus.$on('removeNote', (id) => {
+            noteService.removeNote(id)
+        })
     },
     methods: {
         addNote(note) {

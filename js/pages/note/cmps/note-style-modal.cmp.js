@@ -1,6 +1,7 @@
 'use strict';
 
 
+
 export default {
     props:['noteId'],
     template: `
@@ -30,12 +31,4 @@ export default {
         }
     }
 }
-
-//     },
-//     components: {
-//         menuNotePrv
-//     }
-
-// }
-
 

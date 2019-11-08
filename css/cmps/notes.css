@@ -27,12 +27,19 @@
 
 
 .note-color-btn {
-    height: 50px;
-    width: 50px;
-
+    margin-right: 2px;
+    height: 30px;
+    width: 30px;
+    float: left;
 }
 
-.img crs="<i class="far fa-palette"></i>"
+.note-delete-btn {
+    margin-right: 2px;
+    height: 30px;
+    width: 30px;
+    bottom: 0;
+}
+
 
 
 
