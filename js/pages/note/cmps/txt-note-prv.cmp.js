@@ -20,7 +20,6 @@ export default {
             for (let key in (this.note.style)) {
                
                  style+= `${key}:${this.note.style[key]};`
-                 console.log("computed style:", style)
             }
             
             return style

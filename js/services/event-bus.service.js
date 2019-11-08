@@ -1,5 +1,5 @@
 export const eventBus = new Vue();
 
-window.eventBus = eventBus;
+window.eventBus = eventBus
 
 

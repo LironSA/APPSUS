@@ -180,3 +180,11 @@
 .selectedEmail {
     font-weight: 50;
 }
+.todo-not-prv{
+    text-decoration: underline 0.3px solid;
+}
+
+.todo-not-prv .line-through{
+    text-decoration: line-through;
+}
+

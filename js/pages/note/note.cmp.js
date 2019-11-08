@@ -2,11 +2,12 @@
 import { noteService } from './note-service.js'
 import addNote from './cmps/add-note.cmp.js'
 import noteList from './cmps/note-list.cmp.js'
+
 export default {
     template: `
             <section class="notes-app-container flex justify-center">
-            <add-note></add-note>
-            <note-list v-if="notes":notes="notes"></note-list>
+            <add-note @addNote="addNote"></add-note>
+            <note-list v-if="notes" :notes="notes"></note-list>
             </section>
             `,
     components: {
@@ -22,12 +23,18 @@ export default {
     created() {
         noteService.getNotes()
             .then(notes => {
-                console.log('notes from service', notes);
                 this.notes = notes
             })
         eventBus.$on('bgcChange', (data) => {
-           noteService.setNoteProperty(data)
+            noteService.setNoteProperty(data)
         })
-       
+
+    },
+    methods: {
+        addNote(note) {
+            console.log(note, 'note in note.cmp');
+            noteService.addNote(note)
+        },
+        
     }
 }
