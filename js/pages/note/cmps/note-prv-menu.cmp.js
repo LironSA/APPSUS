@@ -1,24 +1,35 @@
 'use strict';
 
+import styleModal from './note-style-modal.cmp.js'
+
 
 export default {
     props: ['note'],
     template: `
-                <section class="note-list-container">
-                    <input type="color" id="" @change="onBgcChange">
-                    <!-- <button @click="pinNote">pin</button> -->
-                </section>
+            <section class="note-list-container">
+                <button @click="toggleStyleModal">Color</button>
+                <style-modal v-if="isModalActive" :noteId="note.id"></style-modal>   
+            </section>
     `,
-    methods: {
-        onBgcChange(ev) {
-            let color = ev.target.value
-            console.log('color: ', color)
-            eventBus.$emit('bgcChange', 
-                { prop:"style.background-color", 
-                id: this.note.id, val: ev.target.value })
-        },
-
+    
+    data() {
+        return {
+            isModalActive: false
+        }
     },
 
+    methods: {
+        toggleStyleModal() {
+            this.isModalActive = !this.isModalActive;
+        },
+
+
+    },
+    components: {
+        styleModal
+    }
+
 }
+
+
 

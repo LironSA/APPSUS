@@ -34,6 +34,7 @@ export default {
     </section>
     `,
 
+
     computed: {
         timeToShow() {
             var time = new Date(this.email.sentAt);
@@ -69,3 +70,4 @@ export default {
         }
     }
 }
+
