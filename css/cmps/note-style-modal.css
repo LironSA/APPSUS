@@ -1,0 +1,13 @@
+.note-bgc-change div{
+    
+        height: 25px;
+        width: 25px;
+        background-color: rgb(43, 255, 106);
+        border-radius: 50%;
+        display: inline-block;
+      
+}
+ 
+.note-bgc-change div.selected{
+    border: black 1px solid;
+}
