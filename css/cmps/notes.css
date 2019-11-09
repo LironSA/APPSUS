@@ -25,35 +25,61 @@
     width: 30%;
 }
 
+.note-bgc-chang {
+    width: 100%;
+    position: absolute;
+}
+
+.edit-note-menu {
+    width: 50%;
+    align-items: center;
+}
 
 .note-color-btn img {
-    margin-right: 2px;
-    height: 30px;
-    width: 30px;
+    border: none;
+    margin-right: 10px;
+    height: 25px;
+    width: 25px;
     float: left;
+    opacity: 0.5;
+}
+
+.note-color-btn img:hover {
+    cursor: pointer;
+    opacity: 1;
 }
 
 .note-delete-btn img{
-    margin-right: 2px;
-    height: 30px;
-    width: 30px;
+    margin-right: 10px;
+    height: 20px;
+    width: 20px;
     bottom: 0;
     float: left;
+    opacity: 0.5;
+}
+
+.note-delete-btn img:hover{
+    cursor: pointer;
+    opacity: 1;
 }
 
 .note-pinned-btn img{
-    margin-right: 2px;
-    height: 30px;
-    width: 30px;
+    margin-right: 10px;
+    height: 20px;
+    width: 20px;
     bottom: 0;
     float: left;
+    opacity: 0.5;
 }
 
+.note-pinned-btn img:hover{
+    cursor: pointer;
+    opacity: 1;
+}
 
 .imgBtn {
     height: 20px;
     width: 20px;
-
 }
 
 
@@ -61,180 +87,22 @@
     padding: 10px;
 }
 
-
-
-
-
-  
-    
-
-
-    /* coppied from emails */
-    align-content: center;
-    text-align: center;
-}
-
-
-
-
-
-.email-menu{
-    width: 20%;
-    border-right: gray 1px solid;
-}
-.email-menu nav{
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-}
-
-.email-menu-link{
-    width: 100%;
-    height: 30%;
-    text-align: center;
-    margin: 15px;
-    color: rgb(131, 5, 114);
-    font-size: 1.3rem;
-}
-
-.email-menu-link:hover{
-    background: rgb(0, 60, 255);
-    color: yellow;
-    border-radius: 10px;
-    width: 80%;
-    text-decoration: none;
-}
-
-.soon-img {
-    height: 90vh;
-    width: 90wh;
-    align-items: center;
-}
-
-
-/* ----- EMAIL NEW ----- */
-
-.compose {
-    border-radius: 10px;
-    background: rgb(0, 60, 255);
-    color: orange;
-    padding: 8%;
-    width: 80%;
-    text-decoration: none;
-    font-size: 1.7rem;
-    margin-bottom: 60px;
-}
-
-.new-email {
-    margin: 0 10px 10px 10px;
-    border:gray 1px solid;
-    width: 80%;
-}
-
-.new-email-header{
-    padding: 10px;
-    background: rgb(49, 47, 47);
-    color: white;
-}
-
-.send-to {
-    width: 90%;
+.txt-note-prv-container {
     margin: 10px;
-    border: none;
-    border-bottom: gray 1px solid;
-}
-
-.new-email h2 {
-    padding: 5px;
-    right: 0;
-    margin: 5px;
-    font-size: 1rem;
-}
-
-.new-email textarea {
-    height: 30%;
-    margin: 2%;
-    width: 95%;
-    margin: 20%S;
-}
-
-
-/* ----- EMAIL LIST ----- */
-
-.email-list {
-    width: 80%;
-}
-
-
-/* ----- EMAIL PREVIEW ----- */
-
-.email-filter {
-    width: 30%;
-}
-
-.email-filter input{
-    width: 70%;
-    height: 30px;
+    padding: 10%;
     border-radius: 5px;
-    padding: 10px;
-    background: rgb(188, 189, 185);
-    color: black;
-    font-size: 1.2rem;
 }
 
-.email-filter select{
-    width: 25%;
-    height: 30px;
-    border-radius: 5px;
-    padding-left: 5px;
-    background: rgb(188, 189, 185);
-    color: black;
-    font-size: 1rem;
-    border: white 1px solid;
+.txt-note-prv-container p{
+  width: 100%;
 }
 
-
-/* ----- EMAIL PREVIEW ----- */
-
-.preview-container {
+.note-edit-menu {
     width: 100%;
 }
 
-.prev-list {
-    border-bottom: rgb(231, 228, 228) 2px solid;
-    height: 50px;
+.note-to-add options {
+    float: left;
 }
 
-.prev-list:hover {
-    cursor: pointer;
-}
-
-.prev-name {
-    margin-left: 5%;
-    width: 20%;
-}
-.prev-subj {
-    width: 65%;
-}
-.prev-subj a{
-    color: gray ;
-}
-.prev-sent {
-    margin-right: 2%;
-    width: 15%;
-}
-
-
-
-
-.selectedEmail {
-    font-weight: 50;
-}
-.todo-not-prv{
-    text-decoration: underline 0.3px solid;
-}
-
-.todo-not-prv .line-through{
-    text-decoration: line-through;
-}
 
