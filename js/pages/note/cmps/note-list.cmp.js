@@ -2,6 +2,7 @@
 import txtNotePrv from '../cmps/txt-note-prv.cmp.js'
 import todoNotePrv from '../cmps/todo-note-prv.cmp.js'
 import imgNotePrv from '../cmps/img-note-prv.cmp.js'
+import vidNotePrv from '../cmps/vid-note-prv.cmp.js'
 
 export default {
     props: ['notes'],
@@ -20,5 +21,6 @@ export default {
         txtNotePrv,
         todoNotePrv,
         imgNotePrv,
+        vidNotePrv
     }
 }
