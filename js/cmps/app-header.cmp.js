@@ -6,14 +6,14 @@ export default {
     template: `
     <header class="app-header flex space-between">
         <h1 class="header-logo"> ✨ Apps Place </h1>
-        <email-filter></email-filter>
+        <email-filter v-if="searchToShow==='email'" ></email-filter>
         <button style="background: none; border: none" class="toggle-menu" @click="toggleMenu">
             <img src="img/menu.JPG" alt=""></button>
             <user-msg></user-msg>
 
-        <nav class="nav-header flex wrap" v-if="isOpenMenu">
-            <router-link to="/email/list/inbox"><img src="img/email-origin.JPG" alt=""></router-link> 
-            <router-link to="/note"><img src="img/notes_origin.JPG" alt=""> </router-link> 
+        <nav class="nav-header flex wrap" v-if="isOpenMenu" @mouseleave="toggleMenu">
+            <router-link to="/email/list/inbox"><img  @click.stop="toggleMenu"src="img/email-origin.JPG" alt=""></router-link> 
+            <router-link to="/note"><img @click.stop="toggleMenu" src="img/notes_origin.JPG" alt=""> </router-link> 
             <router-link to="/coming-soon"><img src="img/maps.JPG" alt=""> </router-link> 
             <router-link to="/coming-soon"><img src="img/calander.JPG" alt=""> </router-link> 
             <router-link to="/coming-soon"><img src="img/youtube.JPG" alt=""> </router-link> 
@@ -28,7 +28,8 @@ export default {
     `,
     data() {
         return {
-            isOpenMenu: false
+            isOpenMenu: false,
+            searchToShow: ''
         }
     },
     methods: {
@@ -39,5 +40,16 @@ export default {
     components: {
         userMsg,
         emailFilter
+    },
+    watch: {
+        '$route'() {
+            this.searchToShow=''
+            if (this.$route.path.startsWith('/email/list')){
+                this.searchToShow='email'
+            } 
+            if(this.$route.path.startsWith('/note')){
+                this.searchToShow='note'
+            } 
+        }
     }
 }

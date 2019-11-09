@@ -1,5 +1,7 @@
 'use strict';
+
 import { eventBus } from "../../../services/event-bus.service.js";
+import router from '../../../routes.js'
 export default {
     template: `
                 <section class="new-email">
@@ -41,12 +43,12 @@ export default {
     },
     methods: {
         draftEmail() {
-            //todo
+            router.push('/email/list/Inbox')
             eventBus.$emit('draftEmail', this.emailData)
         },
         sendEmail() {
-            //todo
             eventBus.$emit('sendEmail', this.emailData)
+            router.push('/email/list/Inbox')
         }
     }
 }
