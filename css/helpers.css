@@ -30,8 +30,12 @@
     flex-wrap: wrap;
 }
 
-.col{
+.col {
     flex-direction: column ;
+}
+
+.row {
+    flex-direction: row ;
 }
 
 /*----list helpers-----*/

@@ -25,35 +25,61 @@
     width: 30%;
 }
 
+.note-bgc-chang {
+    width: 100%;
+    position: absolute;
+}
+
+.edit-note-menu {
+    width: 50%;
+    align-items: center;
+}
 
 .note-color-btn img {
-    margin-right: 2px;
-    height: 30px;
-    width: 30px;
+    border: none;
+    margin-right: 10px;
+    height: 25px;
+    width: 25px;
     float: left;
+    opacity: 0.5;
+}
+
+.note-color-btn img:hover {
+    cursor: pointer;
+    opacity: 1;
 }
 
 .note-delete-btn img{
-    margin-right: 2px;
-    height: 30px;
-    width: 30px;
+    margin-right: 10px;
+    height: 20px;
+    width: 20px;
     bottom: 0;
     float: left;
+    opacity: 0.5;
+}
+
+.note-delete-btn img:hover{
+    cursor: pointer;
+    opacity: 1;
 }
 
 .note-pinned-btn img{
-    margin-right: 2px;
-    height: 30px;
-    width: 30px;
+    margin-right: 10px;
+    height: 20px;
+    width: 20px;
     bottom: 0;
     float: left;
+    opacity: 0.5;
 }
 
+.note-pinned-btn img:hover{
+    cursor: pointer;
+    opacity: 1;
+}
 
 .imgBtn {
     height: 20px;
     width: 20px;
-
 }
 
 
@@ -61,6 +87,22 @@
     padding: 10px;
 }
 
+.txt-note-prv-container {
+    margin: 10px;
+    padding: 10%;
+    border-radius: 5px;
+}
 
+.txt-note-prv-container p{
+  width: 100%;
+}
+
+.note-edit-menu {
+    width: 100%;
+}
+
+.note-to-add options {
+    float: left;
+}
 
 

@@ -6,10 +6,10 @@ import styleModal from './note-style-modal.cmp.js'
 export default {
     props: ['note'],
     template: `
-            <section>
-                <button class="note-color-btn" @click="toggleStyleModal">
-                    <img src="img/palet1.png" alt="">
-                </button>
+            <section class="edit-note-menu">
+                <section value="" disabled="disabled" class="note-color-btn" @click="toggleStyleModal">
+                    <img src="img/palette1.png" alt="">
+                </section>
                 <style-modal v-if="isModalActive" :noteId="note.id"><img src="img/color_palet.JPG" alt=""> </style-modal>   
                 <section class="note-delete-btn" @click="removeNote(note.id)">
                     <img src="img/trash1.png" alt=""> </section>

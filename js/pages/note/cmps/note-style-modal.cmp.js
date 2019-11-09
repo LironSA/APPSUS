@@ -5,14 +5,14 @@
 export default {
     props:['noteId'],
     template: `
-            <section class="note-bgc-chang">
+            <section class="note-bgc-chang flex">
                 <select @change="onBgcChange">
-                    <option value="white">white</option>
-                    <option value="pink">pink</option>
-                    <option value="orange">orange</option>
-                    <option value="purple">purple</option>
-                    <option value="blue">blue</option>
-                    <option value="green">green</option>
+                    <option value="white" style="color: white">⬤</option>
+                    <option value="pink" style="color: pink">⬤</option>
+                    <option value="orange" style="color: orange">⬤</option>
+                    <option value="purple" style="color: purple">⬤</option>
+                    <option value="blue" style="color: blue">⬤</option>
+                    <option value="green" style="color: green">⬤</option>
                 </select>
             </section>
     `,

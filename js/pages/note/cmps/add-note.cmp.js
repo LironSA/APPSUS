@@ -2,12 +2,12 @@
 
 export default {
     template: `
-        <form @submit.prevent="addNote" class="add-note flex justify-center">
+        <form @submit.prevent="addNote" class="add-note flex row justify-center">
             <input id="addNote" type="text" :placeholder="currPlaceholder" v-model="noteData.content">    
-            <select id="selectNoteType" v-model="noteData.noteType">
-            <option value="txt-note-prv">Text</option>
-            <option value="todo-note-prv">Todo</option>
-            <option value="img-note-prv">Image</option>        
+            <select class="note-to-add flex" id="selectNoteType" v-model="noteData.noteType">
+                <option value="txt-note-prv"><i class="fa fa-font"></i></option>
+                <option value="todo-note-prv"><i class="fa fa-list-alt"></i></option>
+                <option value="img-note-prv"><i class="fa fa-image-polaroid"></i></option>        
             </select>
             <button >Add note </button>
         </form>
