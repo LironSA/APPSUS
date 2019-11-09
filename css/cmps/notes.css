@@ -30,18 +30,22 @@
     position: absolute;
 }
 
-.edit-note-menu {
+.note-prv-menu {
+    position: absolute;
+    bottom: 0;
+    left: 0;
     width: 50%;
     align-items: center;
+    padding: 10px;
+    justify-content: flex-end;
 }
 
 .note-color-btn img {
     border: none;
     margin-right: 10px;
-    height: 25px;
-    width: 25px;
-    float: left;
-    opacity: 0.5;
+    height: 23px;
+    width: 23px;
+    opacity: 0.6;
 }
 
 .note-color-btn img:hover {
@@ -54,7 +58,6 @@
     height: 20px;
     width: 20px;
     bottom: 0;
-    float: left;
     opacity: 0.5;
 }
 
@@ -68,7 +71,6 @@
     height: 20px;
     width: 20px;
     bottom: 0;
-    float: left;
     opacity: 0.5;
 }
 
@@ -84,13 +86,28 @@
 
 
 .single-note {
-    padding: 10px;
+    padding: 5px 5px 5px 10px;
 }
+
+/* --- TODO note --- */
+
+.todo-note-prv-container {
+    margin: 10px;
+    padding: 2% 2% 10% 2%;   
+    border-radius: 5px;
+    /* text-align: left; */
+    justify-self: left;
+}
+
+
+/* --- TXT note --- */
 
 .txt-note-prv-container {
     margin: 10px;
-    padding: 10%;
+    padding: 2% 2% 10% 2%;   
     border-radius: 5px;
+    text-align: center;
+    align-items: left;
 }
 
 .txt-note-prv-container p{

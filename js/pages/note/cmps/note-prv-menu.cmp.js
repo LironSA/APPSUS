@@ -6,18 +6,18 @@ import styleModal from './note-style-modal.cmp.js'
 export default {
     props: ['note'],
     template: `
-            <section class="edit-note-menu">
-                <section value="" disabled="disabled" class="note-color-btn" @click="toggleStyleModal">
+            <section class="note-prv-menu flex row">
+                <style-modal v-if="isModalActive" :noteId="note.id"><img src="img/color_palet.JPG" alt=""> </style-modal>   
+                <section value="" disabled="disabled" class="note-color-btn flex" @click="toggleStyleModal">
                     <img src="img/palette1.png" alt="">
                 </section>
-                <style-modal v-if="isModalActive" :noteId="note.id"><img src="img/color_palet.JPG" alt=""> </style-modal>   
                 <section class="note-delete-btn" @click="removeNote(note.id)">
                     <img src="img/trash1.png" alt=""> </section>
                 <section class="note-pinned-btn" @click="togglePinNote(note.id)">
                     <img style="fill:blue"src="img/pin1.png" alt="">
                 </section>
-            </section>
-    `,
+                </section>
+                `,
     data() {
         return {
             isModalActive: false,
