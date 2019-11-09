@@ -8,6 +8,7 @@
     width: 100%;
     margin-top: 5px;
     align-items: center;
+    justify-content: space-between;
 }
 .toggle-menu {
     width: 30%;
