@@ -14,14 +14,14 @@ export default {
                 <section class="note-delete-btn" @click="removeNote(note.id)">
                     <img src="img/trash1.png" alt=""> </section>
                 <section class="note-pinned-btn" @click="togglePinNote(note.id)">
-                    <img src="img/pin1.png" alt="">
+                    <img style="fill:blue"src="img/pin1.png" alt="">
                 </section>
             </section>
     `,
     data() {
         return {
             isModalActive: false,
-            hover: false
+            hover: true
         }
     },
 
