@@ -1,7 +1,4 @@
 /* ----- EMAIL MENU ----- */
-.email.page{
-    width: 100%;
-}
 .email-menu{
     width: 20%;
     border-right: gray 1px solid;
@@ -52,9 +49,9 @@
 }
 
 .new-email {
-    margin: 0 10px 10px 10px;
     border:gray 1px solid;
-    width: 80%;
+    /* width: 100%;
+    height: 100%; */
 }
 
 .new-email-header{
@@ -87,9 +84,6 @@
 
 /* ----- EMAIL LIST ----- */
 
-.email-list {
-    width: 80%;
-}
 
 
 /* ----- EMAIL PREVIEW ----- */

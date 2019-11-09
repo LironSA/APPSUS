@@ -19,7 +19,7 @@ export default {
     data() {
         return {
             todos: [],
-            hover: true
+            hover: false
         }
     },
     created() {

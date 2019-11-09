@@ -10,7 +10,7 @@ let app = {
     template:
         `   <div class="main-container">
                 <app-header></app-header>
-                <transition name="main-router-trans" enter-active-class="animated fadeInLeftBig" leave-active-class="animated fadeOutRightBig">
+                <transition enter-active-class="animated fadeInLeftBig" leave-active-class="animated fadeOutRightBig">
                 <router-view style="height: 80%; width:100% overflow:hidden;"></router-view>
                 </transition>
                 <app-footer></app-footer>

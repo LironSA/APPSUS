@@ -57,9 +57,7 @@ function removeNote(id) {
 function togglePinNote(id) {
     var idx = gNotes.findIndex(note => note.id === id);
     if (idx !== -1) {
-        console.log('pinned status: ', gNotes[idx].isPinned)
         gNotes[idx].isPinned = !gNotes[idx].isPinned
-        console.log('pinned after: ', gNotes[idx].isPinned)
     }
     storageService.store(NOTES_KEY, gNotes)
     return Promise.resolve();
@@ -72,7 +70,6 @@ function setNoteProperty(data) {
         console.log("data:", data)
         gNotes[idx][data.prop] = data.val
         storageService.store(NOTES_KEY, gNotes)
-        // return Promise.resolve();
     }
 }
 
