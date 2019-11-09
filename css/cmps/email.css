@@ -3,7 +3,9 @@
 .email-menu{
     width: 20%;
     border-right: gray 1px solid;
+    background: royalblue;
 }
+
 .email-menu nav{
     width: 100%;
     align-items: center;
@@ -92,6 +94,7 @@
 
 .email-filter {
     width: 30%;
+    text-align: left;
 }
 
 .email-filter input{

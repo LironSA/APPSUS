@@ -7,7 +7,7 @@ export default {
     props: ['note'],
     template: `
             <section flex >
-                <button class="note-color-btn" @click="toggleStyleModal">
+                <button class="note-color-btn button" @click="toggleStyleModal">
                     <img src="img/palet1.png" alt="">
                 </button>
                 <style-modal v-if="isModalActive" :noteId="note.id"><img src="img/color_palet.JPG" alt=""> </style-modal>   
