@@ -8,7 +8,7 @@ export default {
     template: `
             <section class="note-prv-menu flex row">
                 <style-modal v-if="isModalActive" :noteId="note.id"><img src="img/color_palet.JPG" alt=""> </style-modal>   
-                <section value="" disabled="disabled" class="note-color-btn flex" @click="toggleStyleModal">
+                <section value="" disabled="disabled" class="note-color-btn flex" v-if="hasBgc" @click="toggleStyleModal">
                     <img src="img/palette1.png" alt="">
                 </section>
                 <section class="note-delete-btn" @click="removeNote(note.id)">
@@ -35,6 +35,13 @@ export default {
         removeNote(id) {
             eventBus.$emit('removeNote', id)
         },
+    },
+    computed: {
+        hasBgc() {
+            console.log ('this.note.type: ', this.note.type)
+            var res = (this.note.type !== 'vid-note-prv' || this.note.type !== 'img-note-prv') ? true : false
+            return res;
+        }
     },
     components: {
         styleModal

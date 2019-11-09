@@ -8,12 +8,12 @@ export default {
     props: ['notes'],
     template: `
      <ul class="note-list-container clean-list" style ="border: 1px solid black; column-count: 3;
-     column-gap: 3%;
-     column-width: 30%;">
+     column-gap:none;
+     column-width: 33.3%;">
           <component v-for="note in notes" :key="note.id" :is='note.type' :note="note" 
             style ="width:100% -webkit-column-break-inside: avoid;
             page-break-inside: avoid; position: relative;
-            break-inside: avoid;border: 1px solid gray;" >
+            break-inside: avoid;border: 1px solid gray; margin: 20px;" >
           </component>
                    
      </ul>

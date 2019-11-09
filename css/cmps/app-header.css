@@ -1,12 +1,10 @@
 .app-header {
     font-family: Indie Flower, sans-serif;
-    border-radius: 5px;
     background-color: rgb(204, 15, 211);
     padding: 2px;
     border: blueviolet 1px solid;
     text-align: center;
     width: 100%;
-    margin-top: 5px;
     align-items: center;
 }
 .toggle-menu {

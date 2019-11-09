@@ -7,12 +7,13 @@ export default {
     props: ['note'],
     template: `
         <section   
-        class="todo-note-prv-container flex col align-center justify-center"
+        class="todo-note-prv-container flex col justify-center"
+        @mouseleave="hover = false" @mouseover="hover = true"
         :style="bgColor">
                 <ul v-if="todos.length>0"  >
                     <li v-for="(todo,idx) in todos" :key="idx" :class="{'line-through':todo.isDone}" @click="toggleIsDone(todo)">{{todo.txt}}</li>
                 </ul>
-            <note-prv-menu v-if="hover" :note='note'></note-prv-menu>
+            <note-prv-menu class="note-edit-menu col" v-if="hover" :note='note'> </note-prv-menu>
         </section>
      `,
     data() {

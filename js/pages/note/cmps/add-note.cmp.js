@@ -3,7 +3,7 @@
 export default {
     template: `
         <form @submit.prevent="addNote" class="add-note flex row justify-center">
-            <input id="addNote" type="text" :placeholder="currPlaceholder" v-model="noteData.content">    
+            <input id="addNote" type="text" :placeholder="currPlaceholder" ref="txtInput" v-model="noteData.content">    
             <select class="note-to-add flex" id="selectNoteType" v-model="noteData.noteType">
                 <option value="txt-note-prv"><i class="fa fa-font"></i></option>
                 <option value="todo-note-prv"><i class="fa fa-list-alt"></i></option>
@@ -31,8 +31,10 @@ export default {
         }
     },
     methods: {
-        addNote() {
-            this.$emit('addNote', this.noteData)
+        addNote(ev) {
+            this.$emit('addNote', this.noteData);
+            console.log('this.$ref: ', this.$refs)
+            this.$refs.txtInput.value = '';
         }
     }
 }
