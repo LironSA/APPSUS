@@ -6,12 +6,16 @@ import notePrvMenu from  './note-prv-menu.cmp.js';
 export default {
     props: ['note'],
     template: `
-    <section class="txt-note-prv-container  flex align-center justify-center" v-if="note" :style="bgColor">
+    <section @mouseover="hover = true" @mouseleave="hover=false" class="txt-note-prv-container flex align-center justify-center" v-if="note" :style="bgColor">
         <p>{{note.content}}</p>
-        <note-prv-menu :note='note'> </note-prv-menu>
-        <h1 v-if="note.isPinned">TEST for isPinned</h1>
+        <note-prv-menu v-if="hover" :note='note'> </note-prv-menu>
     </section>
      `,
+     data() {
+        return {
+            hover:false
+        }
+    },
     computed: {
         bgColor() {
             return {'backgroundColor': this.note.backgroundColor}

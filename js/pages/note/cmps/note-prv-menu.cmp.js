@@ -6,7 +6,7 @@ import styleModal from './note-style-modal.cmp.js'
 export default {
     props: ['note'],
     template: `
-            <section flex >
+            <section>
                 <button class="note-color-btn" @click="toggleStyleModal">
                     <img src="img/palet1.png" alt="">
                 </button>
@@ -21,6 +21,7 @@ export default {
     data() {
         return {
             isModalActive: false,
+            hover: false
         }
     },
 
