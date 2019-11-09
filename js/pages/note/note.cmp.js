@@ -35,6 +35,7 @@ export default {
         eventBus.$on('removeNote', (id) => {
             noteService.removeNote(id)
         })
+        console.log('blibala');
     },
     methods: {
         addNote(note) {
