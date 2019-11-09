@@ -8,8 +8,12 @@ import { eventBus } from "../../services/event-bus.service.js";
 export default {
     template: `
     <section class="email page flex">
-       <email-menu></email-menu>
-       <router-view v-if="emails" :emails="filteredEmails"></router-view>
+        <email-menu style="width:25%"></email-menu>
+        <div style="width:75%">
+        <transition class="flex" enter-active-class="animated zoomInDown" leave-active-class="animated zoomOutUp">
+            <router-view style=" heigth:100%;" :emails="filteredEmails"></router-view>
+        </transition>
+        </div>
     </section>
                 `,
     components: {

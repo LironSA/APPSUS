@@ -38,7 +38,6 @@ export default {
     },
     computed: {
         hasBgc() {
-            console.log ('this.note.type: ', this.note.type)
             var res = (this.note.type !== 'vid-note-prv' || this.note.type !== 'img-note-prv') ? true : false
             return res;
         }
