@@ -1,5 +1,7 @@
 /* ----- EMAIL MENU ----- */
-
+.email.page{
+    width: 100%;
+}
 .email-menu{
     width: 20%;
     border-right: gray 1px solid;
