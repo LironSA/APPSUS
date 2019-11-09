@@ -1,7 +1,6 @@
 'use strict';
 
 
-
 export default {
     props: ['noteId'],
     template: `

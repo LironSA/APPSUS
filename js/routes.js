@@ -2,6 +2,7 @@ import emailCmp from './pages/email/email.cmp.js'
 import newMailCmp from './pages/email/cmps/new-mail.cmp.js'
 import emailList from './pages/email/cmps/email-list.cmp.js'
 import commingSoon from './pages/comming-soon.cmp.js'
+import emailDisplay from './pages/email/cmps/email-display.cmp.js'
 
 import noteCmp from './pages/note/note.cmp.js'
 
@@ -19,8 +20,8 @@ let myRoutes = [
                 component: emailList
             },
             {
-                path: 'list/:details',
-                component: emailList
+                path: 'emailDisplay/:emailId',
+                component: emailDisplay
             }
         ]
     },

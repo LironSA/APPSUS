@@ -92,7 +92,7 @@
 }
 
 
-/* ----- EMAIL PREVIEW ----- */
+/* ----- EMAIL FILTER ----- */
 
 .email-filter {
     width: 30%;
@@ -123,10 +123,20 @@
 
 /* ----- EMAIL PREVIEW ----- */
 
-.preview-container {
-    width: 100%;
+.displayed-email {
+   margin: 20px;
 }
 
+.displayed-subject {
+    width: 50%;
+    font-size: 2rem;;
+}
+
+.displayed-sentAt {
+    width: 20%;
+    float: left;
+
+/* 
 .prev-list {
     border-bottom: rgb(231, 228, 228) 2px solid;
     height: 50px;
@@ -156,4 +166,4 @@
 
 .selectedEmail {
     font-weight: 50;
-}
+} */

@@ -4,8 +4,8 @@ export default {
     template: `
         <form @submit.prevent="addNote" class="add-note flex row justify-center">
             <input id="addNote" type="text" :placeholder="currPlaceholder" ref="txtInput" v-model="noteData.content">    
-            <!-- <select class="note-to-add flex" id="selectNoteType" v-model="noteData.noteType"> -->
-                <div class="txt-note-prv"><i class="fa fa-font"></i></div>
+            <select class="note-to-add flex" id="selectNoteType" v-model="noteData.noteType">
+                <option value="txt-note-prv"><i class="fa fa-font"></i></option>
                 <option value="todo-note-prv"><i class="fa fa-list-alt"></i></option>
                 <option value="img-note-prv"><i class="fa fa-image-polaroid"></i></option>        
             </select>

@@ -8,7 +8,7 @@ export const emailService = {
     setEmailProperty,
     draftEmail,
     sendEmail,
-
+    getEmailById
 }
 const EMAILS_KEY = 'emails'
 
@@ -73,6 +73,11 @@ function setEmailProperty(data) {
     }
 }
 
+function getEmailById (id) {
+    var email = gEmails.find(email => email.id === id);
+    return Promise.resolve(email);
+    
+}
 
 
 
