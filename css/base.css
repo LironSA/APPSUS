@@ -8,7 +8,10 @@ body{
     height: 96vh;
     max-width: 96vw;
 }
-
+.page{
+    position: fixed;
+    width: inherit;
+}
 .my-app {
     height: 100%;
 }

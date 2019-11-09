@@ -7,7 +7,7 @@ import { eventBus } from "../../services/event-bus.service.js";
 
 export default {
     template: `
-    <section class="email flex">
+    <section class="email page flex">
        <email-menu></email-menu>
        <router-view v-if="emails" :emails="filteredEmails"></router-view>
     </section>
