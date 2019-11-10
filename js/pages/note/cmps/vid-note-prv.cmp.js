@@ -6,14 +6,16 @@ import notePrvMenu from './note-prv-menu.cmp.js';
 export default {
     props: ['note'],
     template: `
-        <section v-if="note" class="img-note-prv flex align-center justify-center">
-        <iframe :src="note.content" style="width:90%;"/>
+        <section  @mouseover="hover = true" @mouseleave="hover = false" v-if="note" class="img-note-prv flex align-center justify-center">
+        <div class="iframe-container">
+        <iframe :src="note.content"/>
             <note-prv-menu v-if="hover":note="note"></note-prv-menu>
+            </div>
         </section>
     `   ,
     data(){
         return{
-            hover:true
+            hover:false
         }
     },
     components:{
@@ -21,4 +23,3 @@ export default {
     }
 
 }
-// @mouseover="hover = true" @mouseleave="hover = false"

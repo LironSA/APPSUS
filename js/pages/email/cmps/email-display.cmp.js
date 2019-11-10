@@ -7,7 +7,7 @@ import {emailService} from './email-service.js';
 
 export default {
     template: `
-    <section class="displayed-email flex col" v-if="email" @click="emailClicked(email.id)">
+    <section class="displayed-email flex col page" v-if="email" @click="emailClicked(email.id)">
             <div class="displayed-subject">{{email.subject}}</div>
             <div class="displayed-sentAt">{{timeToShow}}</div>
             <div class="received-name" v-if="email.receivedFrom">{{email.receivedFrom.name}}</div>
