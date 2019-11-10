@@ -10,7 +10,7 @@ export default {
   <div class="note-list-container">
   <h4 v-if="title">{{title}}</h4>
      <ul class="clean-list flex wrap">
-          <component v-for="note in notes" :key="note.id" :is='note.type' :note="note" style="position:relative; padding:5px; border-radius: 5px; border:1px solid gray; margin:1%; solid gray; width:19%;" >
+          <component class="dyn-cmp" v-for="note in notes" :key="note.id" :is='note.type' :note="note" >
           </component>       
      </ul>
      </div>

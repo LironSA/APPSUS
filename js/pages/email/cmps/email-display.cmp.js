@@ -1,20 +1,20 @@
 'use strict'
 
 import {emailService} from './email-service.js';
-
+import router from '../../../routes.js';
 
 
 
 export default {
     template: `
-    <section class="displayed-email flex col page" v-if="email" @click="emailClicked(email.id)">
+    <section class="displayed-email flex col page" v-if="email">
             <div class="displayed-subject">{{email.subject}}</div>
             <div class="displayed-sentAt">{{timeToShow}}</div>
             <div class="received-name" v-if="email.receivedFrom">{{email.receivedFrom.name}}</div>
             <div class="received-addr" v-if="email.receivedFrom">{{email.receivedFrom.addr}}</div>
             <div class="displayed-body">{{email.body}}</div>
             <button @click.stop="removeEmail(email.id)">Delete</button>
-            <!-- <div v-if="email.isDraft" @click.stop="useDraft(email)">Add to new msg</div> -->
+            <button v-if="email.isDraft" @click.stop="useDraft(email)">Use as a new mail</button>
     </section>
     `,
     data() {
@@ -27,6 +27,19 @@ export default {
         emailService.getEmailById(id)
             .then (email => this.email = email)
         console.log('$route.params: ', this.$route.params)
+    },
+    methods:{
+        removeEmail(id) {
+            eventBus.$emit('removeEmail', id)
+            router.push(`/email/list/Inbox`)
+        },
+        setEmailProperty(id, prop, val) {
+            var data = { id, prop, val }
+            eventBus.$emit('setEmailProperty', data)
+        },
+        useDraft(email) {
+            router.push(`/email/compose/${email.id}`)
+        }
     },
     computed: {
         timeToShow() {

@@ -8,11 +8,14 @@ export const emailService = {
     setEmailProperty,
     draftEmail,
     sendEmail,
-    getEmailById
+    getEmailById,
+    getDeletedEmails
 }
 const EMAILS_KEY = 'emails'
+const DELETED_KEY = 'deleted'
 
-var gEmails;
+let gEmails;
+let gDeletedEmails;
 
 function getEmails() {
     let emails = storageService.load(EMAILS_KEY)
@@ -25,10 +28,22 @@ function getEmails() {
     }
     return Promise.resolve(gEmails)
 }
+
+function getDeletedEmails() {
+    let emails = storageService.load(DELETED_KEY)
+    if (!emails) {
+        emails = []
+        storageService.store(DELETED_KEY, emails)
+        gDeletedEmails = emails;
+    } else {
+        gDeletedEmails = emails;
+    }
+    return Promise.resolve(gDeletedEmails)
+}
 function sendEmail(email) {
     email.isSent = true
-    email.sentAt=Date.now()
-    email.id=makeId()
+    email.sentAt = Date.now()
+    email.id = makeId()
     gEmails.unshift(email)
     storageService.store(EMAILS_KEY, gEmails)
     const msg = {
@@ -39,8 +54,8 @@ function sendEmail(email) {
 }
 function draftEmail(email) {
     email.isDraft = true
-    email.sentAt=Date.now()
-    email.id=makeId()
+    email.sentAt = Date.now()
+    email.id = makeId()
     gEmails.unshift(email)
     storageService.store(EMAILS_KEY, gEmails)
     const msg = {
@@ -53,7 +68,8 @@ function removeEmail(id) {
     var idx = gEmails.findIndex(email => email.id === id);
     if (idx !== -1) {
         let mail = gEmails.splice(idx, 1)
-        console.log('mail:', mail);
+        gDeletedEmails.unshift(mail)
+        storageService.store(DELETED_KEY, gDeletedEmails)
     }
     storageService.store(EMAILS_KEY, gEmails)
     const msg = {
@@ -73,10 +89,10 @@ function setEmailProperty(data) {
     }
 }
 
-function getEmailById (id) {
+function getEmailById(id) {
     var email = gEmails.find(email => email.id === id);
     return Promise.resolve(email);
-    
+
 }
 
 

@@ -12,7 +12,7 @@ let myRoutes = [
         component: emailCmp,
         children: [
             {
-                path: 'compose',
+                path: 'compose/:id?',
                 component: newMailCmp
             },
             {

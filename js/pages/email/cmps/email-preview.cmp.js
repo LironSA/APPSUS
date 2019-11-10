@@ -6,10 +6,9 @@ import router from '../../../routes.js';
 // TODO - limit the prev body with MORE
 
 export default {
-    props: ['email', 'selectVal'],
+    props: ['email',],
     template: `
-    <section class="preview-container" v-if="email" @click="emailClicked(email.id)">
-        <li class="prev-list flex">
+        <li class="prev-list flex preview-container" v-if="email" @click="emailClicked(email.id)">
             <!-- // ISREAD - to add method that recognizes the read/unread, -->
             <h4 class="prev-name"  v-if="email.receivedFrom" v-bind:class="{selectedEmail:email.isRead}"      
                 ><span :class="{selected: isSelected}" 
@@ -27,10 +26,6 @@ export default {
 
             <!-- <h4 v-if="timeToShow" class="prev-sent">{{timeToShow}}</h4> -->
         </li>
-
-       
-        
-    </section>
     `,
 
 
