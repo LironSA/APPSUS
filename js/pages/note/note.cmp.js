@@ -6,8 +6,8 @@ export default {
     template: `
             <section class="notes-app-container page flex justify-center col">
             <add-note @addNote="addNote"></add-note>
-            <note-list v-if="pinnedNotes.length>0":notes="pinnedNotes" :title="'Pinned Notes:'"></note-list>
-            <note-list v-if="unPinnedNotes.length>0":notes="unPinnedNotes" :title="'Unpinned Notes:'"></note-list>
+            <note-list class="pinned-notes" v-if="pinnedNotes.length>0":notes="pinnedNotes" :title="'Pinned Notes:'"></note-list>
+            <note-list class="unpinned-notes" v-if="unPinnedNotes.length>0":notes="unPinnedNotes" :title="'Unpinned Notes:'"></note-list>
             </section>
             `,
     components: {
