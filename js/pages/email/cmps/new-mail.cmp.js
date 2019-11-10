@@ -1,7 +1,9 @@
 'use strict';
 
+import { emailService } from './email-service.js';
 import { eventBus } from "../../../services/event-bus.service.js";
 import router from '../../../routes.js'
+
 export default {
     template: `
                 <section class="new-email page">
@@ -39,10 +41,14 @@ export default {
             router.push('/email/list/Inbox')
         }
     },
-    watch:{
-        '$route.params.id'(){
-            console.log(this.$route.params.id);
-            
-        }
+
+    created() {
+        let id = this.$route.params.id
+        emailService.getEmailById(id)
+            .then(email => {
+                this.emailData.subject=email.subject
+                this.emailData.body=email.body
+            })
+
     }
 }
