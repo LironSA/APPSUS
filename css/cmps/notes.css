@@ -24,8 +24,9 @@
   padding: 5px;
   border-radius: 5px;
   border: 1px solid gray;
-  margin: 1%;
+  margin: 0.5%;
   width: 19%;
+  
 }
 .note-list-container {
   width: 100%;
@@ -138,21 +139,3 @@
   height: 100%;
 }
 
-/* 
-.pinned-notes {
-    border-bottom: cornflowerblue 1px solid;
-<<<<<<< HEAD
-    background-image: url("/img/pinned.jpg");
-    /* background-color: red; */
-/* 
-.unpinned-notes {
-    background-image: url("/img/unpinned-bgc.png");
-    /* background-color: red; */
-=======
-    background-image: url("/img/pinned.jpg"); */
-/* background-color: red; */
-/* 
-.unpinned-notes {
-    background-image: url("/img/unpinned-bgc.png");
-    /* background-color: red; */
->>>>>>> 12d090b02a3ebc023caa9fa5d9386438fd2871b1
