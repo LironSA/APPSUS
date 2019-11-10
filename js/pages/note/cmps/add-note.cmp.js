@@ -7,10 +7,10 @@ export default {
                 <div class="add-note-btns flex ">
                     <div class="add-note-btn" @click="changeNoteType('txt-note-prv')" ><i class="fa fa-font"></i></div>
                     <div class="add-note-btn" @click="changeNoteType('todo-note-prv')" ><i class="fa fa-list-alt"></i></div>
-                    <div class="add-note-btn" @click="changeNoteType('img-note-prv')" >img</div>        
-                    <div class="add-note-btn" @click="changeNoteType('vid-note-prv')" >vid</div>        
+                    <div class="add-note-btn" @click="changeNoteType('img-note-prv')" ><i class="fa fa-image"></i></div>        
+                    <div class="add-note-btn" @click="changeNoteType('vid-note-prv')" ><i class="fa fa-youtube"></i></i></div>        
+                    <button @click="addNote" >Add </button>
                 </div>
-            <button @click="addNote" >Add note </button>
         </section>
     `,
     data() {

@@ -101,7 +101,7 @@ function getEmailById(id) {
 
 
 const DEFUALT_EMAILS = [
-    { id: makeId(), sentTo: { to: [], cc: [], bcc: [] }, receivedFrom: { name: 'Jack', addr: 'Jack@gmail.com' }, subject: 'Wassap with Vue?', body: 'May I', isStarred: false, isDraft: true, isSent: true, isRead: false, sentAt: 1554580930594 },
+    { id: makeId(), sentTo: { to: [], cc: [], bcc: [] }, receivedFrom: { name: 'Jack', addr: 'Jack@gmail.com' }, subject: 'Hit the road Jack', body: 'May I', isStarred: false, isDraft: true, isSent: true, isRead: false, sentAt: 1554580930594 },
     { id: makeId(), sentTo: { to: [], cc: [], bcc: [] }, receivedFrom: { name: 'Stan', addr: 'Stan@gmail.com' }, subject: 'My plans for the summer', body: 'Staying at home its too hot outside', isStarred: false, isSent: false, isRead: false, sentAt: 155111111594 },
     { id: makeId(), sentTo: { to: [], cc: [], bcc: [] }, receivedFrom: { name: 'Roy', addr: 'Roy@gmail.com' }, subject: 'Sprint progress status ', body: 'just faking data', isStarred: true, isSent: false, isRead: false, sentAt: 151569930594 },
     { id: makeId(), sentTo: { to: [], cc: [], bcc: [] }, receivedFrom: { name: 'Gus', addr: 'Gus@gmail.com' }, subject: 'God damn', body: 'This is hard', isStarred: false, isSent: false, isRead: false, sentAt: 1551133458594 },
