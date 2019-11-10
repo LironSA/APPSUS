@@ -12,7 +12,7 @@ export default {
             <!-- // ISREAD - to add method that recognizes the read/unread, -->
             <h4 class="prev-name"  v-if="email.receivedFrom" v-bind:class="{selectedEmail:email.isRead}"      
                 ><span :class="{selected: isSelected}" 
-                @click.stop="setEmailProperty(email.id, 'isSselected', !email.isSelected)">✉</span>
+                @click.stop="setEmailProperty(email.id, 'isSselected', !email.isSelected)"><i class="fa fa-envelope"></i> </span>
                 
                 <span :class="{starred: isStarred}" 
                 @click.stop="setEmailProperty(email.id, 'isStarred', !email.isStarred)">☆</span> {{email.receivedFrom.name}}</h4>
