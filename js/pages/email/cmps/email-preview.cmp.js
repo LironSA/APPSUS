@@ -9,10 +9,10 @@ export default {
     props: ['email',],
     template: `
         <li class="prev-list flex preview-container" v-if="email" @click="emailClicked(email.id)">
-            <!-- // ISREAD - to add method that recognizes the read/unread, -->
+
             <h4 class="prev-name"  v-if="email.receivedFrom" v-bind:class="{selectedEmail:email.isRead}"      
-                ><span :class="{selected: isSelected}" 
-                @click.stop="setEmailProperty(email.id, 'isSselected', !email.isSelected)"><i class="fa fa-envelope"></i> </span>
+                ><span :class="{read: isRead}" 
+                @click.stop="setEmailProperty(email.id, 'isRead', !email.isRead)">✉</i> </span>
                 
                 <span :class="{starred: isStarred}" 
                 @click.stop="setEmailProperty(email.id, 'isStarred', !email.isStarred)">☆</span> {{email.receivedFrom.name}}</h4>
@@ -24,7 +24,7 @@ export default {
 
 
 
-            <!-- <h4 v-if="timeToShow" class="prev-sent">{{timeToShow}}</h4> -->
+            <h4 v-if="timeToShow" class="prev-sent">{{timeToShow}}</h4>
         </li>
     `,
 
@@ -32,14 +32,24 @@ export default {
     computed: {
         timeToShow() {
             var time = new Date(this.email.sentAt);
-            var jsonDate = (time).toJSON().slice(0, 10);
-            return jsonDate;
+            let date = tempTime.substring(3, 15)
+                return tempTime.substring(16, 21) + date
+
+            // var jsonDate = (time).toJSON().slice(0, 10);
+            // return jsonDate;
             // return jsonDate.splice(10, 1, "000");
 
             // moment().format('MMMM Do YYYY, h:mm:ss a')
             
             // $(".time").text(moment(time).format('h:mm:ss a'));
             // return time;
+
+            // getCurrTime(sentAt) {
+            //     let tempTime = new Date(sentAt) + '';
+            //     let date = tempTime.substring(3, 15)
+            //     return tempTime.substring(16, 21) + date
+            // }
+
 
         }
     },
@@ -72,6 +82,9 @@ export default {
     computed: {
         isStarred () {
             return this.email.isStarred;
+        },
+        isRead() {
+            return this.email.isRead;
         }
     }
 }

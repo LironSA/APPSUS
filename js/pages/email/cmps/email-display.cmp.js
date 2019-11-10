@@ -8,11 +8,12 @@ import router from '../../../routes.js';
 export default {
     template: `
     <section class="displayed-email flex col page" v-if="email">
-            <div class="displayed-subject">{{email.subject}}</div>
-            <div class="displayed-sentAt">{{timeToShow}}</div>
-            <div class="received-name" v-if="email.receivedFrom">{{email.receivedFrom.name}}</div>
+
+            <div class="displayed-subject"><span>Subject: </span>{{email.subject}}</div>
+            <div class="received-name" v-if="email.receivedFrom"><span>Received from: </span>{{email.receivedFrom.name}}</div>
             <div class="received-addr" v-if="email.receivedFrom">{{email.receivedFrom.addr}}</div>
             <div class="displayed-body">{{email.body}}</div>
+            <div class="displayed-sentAt"><span>Received at: </span>{{timeToShow}}</div>
             <button @click.stop="removeEmail(email.id)">Delete</button>
             <button v-if="email.isDraft" @click.stop="useDraft(email)">Use as a new mail</button>
     </section>
@@ -42,13 +43,13 @@ export default {
     },
     computed: {
         timeToShow() {
-            var time = new Date(this.email.sentAt);
-            var jsonDate = (time).toJSON().slice(0, 10);
-            return jsonDate;
             // var time = new Date(this.email.sentAt);
+            // var jsonDate = (time).toJSON().slice(0, 10);
+            // return jsonDate;
+            var time = new Date(this.email.sentAt);
             // moment.locale(time)
             // return jsonDate.splice(10, 1, "000");
-            // return time;
+            return time;
             // var jsonDate = (time).toJSON().slice(0, 10);
             // return jsonDate;
             // moment.defaultFormat(time);

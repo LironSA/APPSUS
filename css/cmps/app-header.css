@@ -46,7 +46,8 @@
     font-size: 1.5rem;
 }
 .nav-header>a{
-    padding: 5px;
+    padding: 20px;
+    color: orange;
 }
 
 img.nav-header{
