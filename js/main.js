@@ -9,12 +9,12 @@ let app = {
     el: '.my-app',
     template:
         `   <div class="main-container">
-                <app-header></app-header>
-                <transition enter-active-class="animated fadeInLeftBig" leave-active-class="animated fadeOutRightBig">
-                <router-view style="height: 80%; width:100% "></router-view>
-                </transition>
-                <app-footer></app-footer>
-            </div>
+        <app-header></app-header>
+        <transition enter-active-class="animated fadeInLeftBig" leave-active-class="animated fadeOutRightBig">
+        <router-view style="height: 80%; width:100% "></router-view>
+        </transition>
+        <app-footer></app-footer>
+        </div>
         `
     ,
     components: {
@@ -24,3 +24,5 @@ let app = {
 }
 
 new Vue(app);
+
+            // <img class="wallpaper" src="img/treeWallpaper.jpg" alt="">

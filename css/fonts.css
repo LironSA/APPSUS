@@ -7,3 +7,8 @@
     font-family: Indie Flower;
     src: url('/fonts/Indie Flower/IndieFlower-Regular.ttf');
 }
+
+@font-face {
+    font-family: McLaren;
+    src: url('/fonts/McLaren/McLaren-Regular.ttf');
+}
