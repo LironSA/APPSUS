@@ -22,6 +22,7 @@ export default {
     data() {
         return {
             emails: [],
+            deletedEmails:[],
 
             filterBy: {
                 type: '',
@@ -42,6 +43,10 @@ export default {
         emailService.getEmails()
             .then(emails => {
                 this.emails = emails
+            })
+            emailService.getDeletedEmails()
+            .then(emails => {
+                this.deletedEmails = emails
             })
         eventBus.$on('removeEmail', (id) => {
             this.removeEmail(id)
@@ -68,6 +73,7 @@ export default {
 
     computed: {
         filteredEmails() {
+            if(this.filterBy.type==='Trash')return this.deletedEmails
             if (!this.filterBy.type && !this.filterBy.selectVal && !this.filterBy.txtSearch) {
                 return this.emails.filter(email => {
                     return email.isSent === false

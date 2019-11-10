@@ -15,7 +15,6 @@ export default {
                     <section>
                         <button @click="sendEmail">Send</button>
                         <button @click="draftEmail">Draft</button>
-
                     </section>            
                 </section>            
     `,
@@ -30,17 +29,6 @@ export default {
             }
         }
     },
-    created() {
-        eventBus.$on('editDraft', email => {
-            this.emailData.sentTo = (email.sentTo.to.length !== 0) ? email.sentTo.to.map(str => { return str }) : ''
-            this.emailData.sentToCc = (email.sentTo.cc.length !== 0) ? email.sentTo.cc.map(str => { return str }) : ''
-            this.emailData.sentToBcc = (email.sentTo.bcc.length !== 0) ? email.sentTo.bcc.map(str => { return str }) : ''
-            this.emailData.subject = email.subject
-            this.emailData.body = email.body
-
-        })
-
-    },
     methods: {
         draftEmail() {
             router.push('/email/list/Inbox')
@@ -49,6 +37,12 @@ export default {
         sendEmail() {
             eventBus.$emit('sendEmail', this.emailData)
             router.push('/email/list/Inbox')
+        }
+    },
+    watch:{
+        '$route.params.id'(){
+            console.log(this.$route.params.id);
+            
         }
     }
 }
