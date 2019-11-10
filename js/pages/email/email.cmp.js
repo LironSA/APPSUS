@@ -9,7 +9,7 @@ export default {
     template: `
     <section class="email page flex">
         <email-menu></email-menu>
-        <div style="width:75%">
+        <div class="email-router-container">
         <transition class="flex" enter-active-class="animated zoomInDown" leave-active-class="animated zoomOutUp">
             <router-view style=" heigth:100%;" :emails="filteredEmails"></router-view>
         </transition>
