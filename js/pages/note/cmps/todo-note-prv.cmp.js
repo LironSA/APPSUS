@@ -6,15 +6,13 @@ import notePrvMenu from './note-prv-menu.cmp.js';
 export default {
     props: ['note'],
     template: `
-        <section   
-        class="todo-note-prv-container flex col justify-center"
-        @mouseleave="hover = false" @mouseover="hover = true"
-        :style="bgColor">
+        <li   
+        class="todo-note-prv-container flex col" :style="bgColor"  @mouseleave="hover = false" @mouseover="hover = true">
                 <ul v-if="todos.length>0"  >
                     <li v-for="(todo,idx) in todos" :key="idx" :class="{'line-through':todo.isDone}" @click="toggleIsDone(todo)">{{todo.txt}}</li>
                 </ul>
-            <note-prv-menu class="note-edit-menu col" v-if="hover" :note='note'> </note-prv-menu>
-        </section>
+            <note-prv-menu v-if="hover" :note='note'></note-prv-menu>
+        </li>
      `,
     data() {
         return {

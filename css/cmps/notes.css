@@ -21,12 +21,11 @@
 
 /* notes-body */
 .dyn-cmp {
-  position: relative;
   padding: 5px;
   border-radius: 5px;
   border: 1px solid gray;
   margin: 0.5%;
-  width: 19%;
+  width: 300px;
   height: 200px;
   
 }
@@ -103,29 +102,38 @@
 }
 
 /* --- TODO note --- */
+.line-through {
+  text-decoration: line-through;
+}
 
 .todo-note-prv-container {
   text-align: left;
-  justify-self: left;
+  justify-content:space-between;
 }
-
+.todo-note-prv-container .note-prv-menu{
+  align-self: flex-end;
+}
 /* --- TXT note --- */
 
 .txt-note-prv-container {
   text-align: center;
+  justify-content: space-between;
+}
+.txt-note-prv-container .note-prv-menu{
+  align-self: flex-end;
 }
 
 .txt-note-prv-container p {
   width: 100%;
+
 }
 
 .note-edit-menu {
   width: 100%;
 }
 
-.line-through {
-  text-decoration: line-through;
-}
+
+/* --- vid note --- */
 
 .iframe-container {
   position: relative;
@@ -141,3 +149,19 @@
   height: 100%;
 }
 
+/* --- Img note --- */
+.img-note-prv{
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.img-container{
+  width: 67%;
+}
+.img-container img{
+  width: 100%;
+}
+.img-note-prv .note-prv-menu{
+  align-self: flex-end;
+}

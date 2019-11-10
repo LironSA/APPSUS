@@ -6,15 +6,14 @@ import notePrvMenu from  './note-prv-menu.cmp.js';
 export default {
     props: ['note'],
     template: `
-    <section @mouseover="hover = true" @mouseleave="hover=false" 
-    class="txt-note-prv-container flex col align-center justify-center" v-if="note" :style="bgColor">
+    <section class="txt-note-prv-container flex col" v-if="note" :style="bgColor" @mouseover="hover = true" @mouseleave="hover=false">
         <p>{{note.content}}</p>
-        <note-prv-menu class="note-edit-menu col" v-if="hover" :note='note'> </note-prv-menu>
+        <note-prv-menu class="note-prv-menu " v-if="hover" :note='note'> </note-prv-menu>
     </section>
      `,
      data() {
         return {
-            hover:false
+            hover: false
         }
     },
     computed: {
@@ -26,6 +25,3 @@ export default {
         notePrvMenu
     }
 }
-
-
-        
