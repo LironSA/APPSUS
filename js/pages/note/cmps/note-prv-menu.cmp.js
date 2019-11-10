@@ -6,9 +6,9 @@ import styleModal from './note-style-modal.cmp.js'
 export default {
     props: ['note'],
     template: `
-            <section class="note-prv-menu flex row">
+            <section class="note-prv-menu flex">
                 <style-modal v-if="isModalActive" :noteId="note.id"><img src="img/color_palet.JPG" alt=""> </style-modal>   
-                <section value="" disabled="disabled" class="note-color-btn flex" v-if="hasBgc" @click="toggleStyleModal">
+                <section class="note-color-btn flex"@click="toggleStyleModal">
                     <img src="img/palette1.png" alt="">
                 </section>
                 <section class="note-delete-btn" @click="removeNote(note.id)">
@@ -16,7 +16,7 @@ export default {
                 <section class="note-pinned-btn" @click="togglePinNote(note.id)">
                     <img style="fill:blue"src="img/pin1.png" alt="">
                 </section>
-                </section>
+            </section>
                 `,
     data() {
         return {
@@ -35,12 +35,6 @@ export default {
         removeNote(id) {
             eventBus.$emit('removeNote', id)
         },
-    },
-    computed: {
-        hasBgc() {
-            var res = (this.note.type !== 'vid-note-prv' || this.note.type !== 'img-note-prv') ? true : false
-            return res;
-        }
     },
     components: {
         styleModal

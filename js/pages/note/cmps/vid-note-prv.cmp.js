@@ -9,13 +9,13 @@ export default {
         <section  @mouseover="hover = true" @mouseleave="hover = false" v-if="note" class="img-note-prv flex align-center justify-center">
         <div class="iframe-container">
         <iframe :src="note.content"/>
-            <note-prv-menu v-if="hover":note="note"></note-prv-menu>
-            </div>
+        </div>
+        <note-prv-menu v-if="hover":note="note"></note-prv-menu>
         </section>
     `   ,
     data(){
         return{
-            hover:false
+            hover:true
         }
     },
     components:{

@@ -8,7 +8,7 @@ export default {
   props: ['notes','title'],
   template: `
   <div class="note-list-container">
-  <h4 v-if="title">{{title}}</h4>
+  <p v-if="title">{{title}}</p>
      <ul class="clean-list flex wrap">
           <component class="dyn-cmp" v-for="note in notes" :key="note.id" :is='note.type' :note="note" >
           </component>       
