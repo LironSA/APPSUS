@@ -9,10 +9,10 @@ export default {
     props: ['email',],
     template: `
         <li class="prev-list flex preview-container" v-if="email" @click="emailClicked(email.id)">
-            <!-- // ISREAD - to add method that recognizes the read/unread, -->
+
             <h4 class="prev-name"  v-if="email.receivedFrom" v-bind:class="{selectedEmail:email.isRead}"      
-                ><span :class="{selected: isSelected}" 
-                @click.stop="setEmailProperty(email.id, 'isSselected', !email.isSelected)"><i class="fa fa-envelope"></i> </span>
+                ><span :class="{read: isRead}" 
+                @click.stop="setEmailProperty(email.id, 'isRead', !email.isRead)">✉</i> </span>
                 
                 <span :class="{starred: isStarred}" 
                 @click.stop="setEmailProperty(email.id, 'isStarred', !email.isStarred)">☆</span> {{email.receivedFrom.name}}</h4>
@@ -72,6 +72,9 @@ export default {
     computed: {
         isStarred () {
             return this.email.isStarred;
+        },
+        isRead() {
+            return this.email.isRead;
         }
     }
 }

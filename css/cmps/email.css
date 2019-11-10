@@ -8,6 +8,7 @@
 .email-menu nav{
     align-items: flex-start;
     justify-content: left;
+    min-width: 20%;
 }
 
 .email-menu-link{
@@ -16,7 +17,8 @@
     margin: 20px;
     color: rgb(82, 3, 102);
     font-size: 1.3rem;
-    padding: 20px;
+   padding-right: 5%;
+   padding-left: 5%;
 }
 
 .email-menu-link:hover{
@@ -39,29 +41,41 @@
 .compose {
     border-radius: 10px;
     background:#1D7874;;
-    /* background: rgb(0, 60, 255); */
     color: orange;
     padding: 5%;
     width: 80%;
-    height: 80px;
+    height: 50px;
     text-decoration: none;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
+    margin-top: 27px;
 }
 
 .new-email {
     border:gray 1px solid;
     height: 100%;
+    padding: 2%;
+
 }
 
-.new-email-header{
-    padding: 10px;
-    background: rgb(49, 47, 47);
-    color: white;
+.sub-header{
+    font-family: Indie Flower, sans-serif;
+    padding: 1%;
     margin-block-start: 0;
+    height: 50px;
+    width: 100%;
+    margin: 0 2% 0 2%;
+    border-radius: 10px;
+    background:rgb(7, 177, 168);;
+    color: yellow;
+    border: rgb(51, 51, 241);
+    text-decoration: none;
+    font-size: 1.5rem;
+    text-align: center;
 }
+
 
 .send-to {
-    width: 90%;
+    width: 100%;
     margin: 10px;
     border: none;
     border-bottom: gray 1px solid;
@@ -75,15 +89,31 @@
 }
 
 .new-email textarea {
-    height: 30%;
+    height: 25%;
     margin: 2%;
     width: 95%;
 }
 
+.new-email button {
+    width: 10%;
+    margin: 0 2% 0 2%;
+    border-radius: 10px;
+    background:rgb(7, 177, 168);;
+    color: yellow;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5%;
+}
+
+
+
+.new-email button:hover {
+    cursor: pointer;
+}
 
 /* ----- EMAIL LIST ----- */
 .email-router-container{
-    width: 100%;
+    width: 80%;
 }
 
 
@@ -120,6 +150,10 @@
 
 .starred {
     color: red;
+}
+
+.isRead {
+    color: green;
 }
 
 .displayed-email {

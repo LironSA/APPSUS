@@ -7,7 +7,7 @@ import router from '../../../routes.js'
 export default {
     template: `
                 <section class="new-email page">
-                    <h1 class="new-email-header">New Message</h1>
+                    <h1 class="sub-header">New Message</h1>
                     <h2>To: <input type="email" class="send-to" placeholder="Email Address" v-model="emailData.sentTo"/></h2>
                     <h2>Cc: <input type="email" class="send-to" placeholder="Email Address" v-model="emailData.sentToCc"/></h2>
                     <h2>Bcc: <input type="email" class="send-to" placeholder="Email Address" v-model="emailData.sentToBcc"/></h2>
