@@ -44,11 +44,12 @@ export default {
 
     created() {
         let id = this.$route.params.id
-        emailService.getEmailById(id)
-            .then(email => {
-                this.emailData.subject=email.subject
-                this.emailData.body=email.body
-            })
-
+        if (id) {
+            emailService.getEmailById(id)
+                .then(email => {
+                    this.emailData.subject = email.subject
+                    this.emailData.body = email.body
+                })
+        }
     }
 }
