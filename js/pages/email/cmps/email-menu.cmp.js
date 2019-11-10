@@ -13,7 +13,9 @@ export default {
                         <router-link class="email-menu-link" to="/email/list/Sent">
                         <i class="fa fa-paper-plane">\t Sent Email</i></router-link>
                         <router-link class="email-menu-link" to="/email/list/Draft">
-                        <i class="fa fa-comment-alt-edit">\t Drafts</i></router-link>
+                        <i class="fa fa-sticky-note">\t Drafts</i></router-link>
+                        <router-link class="email-menu-link" to="/email/list/Trash">
+                        <i class="fa fa-trash">\t Trash</i></router-link>
 
                     </nav>
                 </section>

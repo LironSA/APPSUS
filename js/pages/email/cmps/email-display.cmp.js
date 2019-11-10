@@ -33,7 +33,12 @@ export default {
             var time = new Date(this.email.sentAt);
             var jsonDate = (time).toJSON().slice(0, 10);
             return jsonDate;
-            return jsonDate.splice(10, 1, "000");
+            // var time = new Date(this.email.sentAt);
+            // moment.locale(time)
+            // return jsonDate.splice(10, 1, "000");
+            // return time;
+            // var jsonDate = (time).toJSON().slice(0, 10);
+            // return jsonDate;
             // moment.defaultFormat(time);
             // return time
 

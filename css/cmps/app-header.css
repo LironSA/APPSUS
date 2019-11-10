@@ -1,6 +1,7 @@
 .app-header {
     font-family: Indie Flower, sans-serif;
-    background-color: rgb(204, 15, 211);
+    background-color: #1D7874;
+    color: orange;
     padding: 2px;
     border: blueviolet 1px solid;
     text-align: center;
