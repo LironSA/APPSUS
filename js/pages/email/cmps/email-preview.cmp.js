@@ -12,10 +12,11 @@ export default {
         <li class="prev-list flex">
             <!-- // ISREAD - to add method that recognizes the read/unread, -->
             <h4 class="prev-name"  v-if="email.receivedFrom" v-bind:class="{selectedEmail:email.isRead}"      
-                >{{email.receivedFrom.name}}</h4>
-            <h4 class="prev-subj">{{email.subject}} - 
-                <a>{{email.body}}</a></h4> 
-            <h4 class="prev-sent">{{timeToShow}}</h4>
+                ><span :class="{starred: isStarred}" 
+                @click.stop="setEmailProperty(email.id, 'isStarred', !email.isStarred)">☆</span> {{email.receivedFrom.name}}</h4>
+            <h4 class="prev-subj" v-bind:class="{selectedEmail:email.isRead}">{{email.subject}} - 
+                <a>{{email.body}}</a></h4>
+            <!-- <h4 v-if="timeToShow" class="prev-sent">{{timeToShow}}</h4> -->
         </li>
 
        
@@ -30,6 +31,12 @@ export default {
             var jsonDate = (time).toJSON().slice(0, 10);
             return jsonDate;
             // return jsonDate.splice(10, 1, "000");
+
+            // moment().format('MMMM Do YYYY, h:mm:ss a')
+            
+            // $(".time").text(moment(time).format('h:mm:ss a'));
+            // return time;
+
         }
     },
     data() {
@@ -58,5 +65,10 @@ export default {
             }, 100)
         }
     },
+    computed: {
+        isStarred () {
+            return this.email.isStarred;
+        }
+    }
 }
 

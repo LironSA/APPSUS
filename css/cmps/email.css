@@ -117,6 +117,10 @@
 
 /* ----- EMAIL PREVIEW ----- */
 
+.starred {
+    color: red;
+}
+
 .displayed-email {
    margin: 20px;
 }
@@ -129,11 +133,12 @@
 .displayed-sentAt {
     width: 20%;
     float: left;
+}
 
-/* 
 .prev-list {
     border-bottom: rgb(231, 228, 228) 2px solid;
     height: 50px;
+    align-items: center;
 }
 
 .prev-list:hover {
@@ -160,4 +165,15 @@
 
 .selectedEmail {
     font-weight: 50;
-} */
+}
+
+
+.prev-name {
+    margin-left: 3%;
+    margin-top: 20px;
+    size: 80px
+}
+                    
+.prev-list img:hover {
+    color: red
+}
