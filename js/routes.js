@@ -5,6 +5,7 @@ import commingSoon from './pages/comming-soon.cmp.js'
 import emailDisplay from './pages/email/cmps/email-display.cmp.js'
 
 import noteCmp from './pages/note/note.cmp.js'
+import homeCmp from './cmps/app-homePage.cmp.js'
 
 let myRoutes = [
     {
@@ -32,6 +33,10 @@ let myRoutes = [
     {
         path: '/note',
         component: noteCmp
+    },
+    {
+        path: '/home',
+        component: homeCmp
     },
 
 ]

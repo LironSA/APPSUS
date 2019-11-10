@@ -159,26 +159,70 @@
     color: green;
 }
 
-.displayed-email {
-   margin: 20px;
-}
+/* ----- EMAIL SINGLE ----- */
 
 .displayed-subject {
     text-align: center;
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 100px;
+    border-bottom: orange 1px solid;
 }
 
-.displayed-email span{
-    font-size: 1rem;
-    padding-right: 20px;
+.received-name {
+    font-size: 1.7rem;
+    margin-bottom: 30px;
+    margin-left: 100px;
+}
+
+.received-addr {
+    font-size: 1.7rem;
+    margin-bottom: 30px;
+    margin-left: 100px;
+    
+}
+
+.displayed-body {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    margin-left: 100px;
+    font-family: 'Dancing Script', cursive;
 }
 
 .displayed-sentAt {
     float: left;
-    text-align: center;
     font-size: 1rem;
+    margin-bottom: 50px;
+    margin-left: 100px;
 }
+
+.displayed-email span{
+    font-size: 1.3rem;
+    padding-right: 20px;
+}
+
+.displayed-email button {
+    width: 10%;
+    margin-left: 100px;
+    border-radius: 10px;
+    background:rgb(7, 177, 168);;
+    color: yellow;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5%;
+    border: none;
+}
+
+.displayed-email button {
+cursor: pointer;
+}
+
+
+.displayed-email {
+   margin: 20px;
+}
+
+/* ----- END -- EMAIL SINGLE ----- */
+
 
 .prev-list {
     font-family: 'McLaren', cursive;
@@ -199,7 +243,7 @@
 .prev-subj {
     width: 65%;
 }
-.prev-subj a{
+.prev-subj span{
     color: gray ;
 }
 .prev-sent {
