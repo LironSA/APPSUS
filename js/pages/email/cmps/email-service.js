@@ -68,7 +68,7 @@ function removeEmail(id) {
     var idx = gEmails.findIndex(email => email.id === id);
     if (idx !== -1) {
         let mail = gEmails.splice(idx, 1)
-        gDeletedEmails.unshift(mail)
+        gDeletedEmails.unshift(mail[0])
         storageService.store(DELETED_KEY, gDeletedEmails)
     }
     storageService.store(EMAILS_KEY, gEmails)

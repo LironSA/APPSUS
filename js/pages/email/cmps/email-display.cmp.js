@@ -26,7 +26,6 @@ export default {
         let id = this.$route.params.emailId;
         emailService.getEmailById(id)
             .then (email => this.email = email)
-        console.log('$route.params: ', this.$route.params)
     },
     methods:{
         removeEmail(id) {
