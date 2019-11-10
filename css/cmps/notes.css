@@ -39,10 +39,11 @@
     margin: 3%;
     color: rgb(41, 41, 104);
     background: orange;
+    border: none;
 
 }
 
-.add-note-btns button {
+.add-note-btns button:hover {
     cursor: pointer;
 }
 

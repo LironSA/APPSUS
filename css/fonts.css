@@ -12,3 +12,8 @@
     font-family: McLaren;
     src: url('/fonts/McLaren/McLaren-Regular.ttf');
 }
+
+@font-face {
+    font-family: Dancing_Script;
+    src: url('fonts/Dancing_Script/DancingScript-Regular.ttf');
+}

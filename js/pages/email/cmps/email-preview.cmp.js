@@ -17,12 +17,8 @@ export default {
                 <span :class="{starred: isStarred}" 
                 @click.stop="setEmailProperty(email.id, 'isStarred', !email.isStarred)">☆</span> {{email.receivedFrom.name}}</h4>
 
-
-
             <h4 class="prev-subj" v-bind:class="{selectedEmail:email.isRead}">{{email.subject}} - 
-                <a>{{email.body}}</a></h4>
-
-
+                <span>{{textToShow}}</span></h4>
 
             <h4 v-if="timeToShow" class="prev-sent">{{timeToShow}}</h4>
         </li>
@@ -30,6 +26,10 @@ export default {
 
 
     computed: {
+        textToShow() {
+         
+        },
+        
         timeToShow() {
             var time = new Date(this.email.sentAt);
             let date = tempTime.substring(3, 15)
@@ -55,7 +55,8 @@ export default {
     },
     data() {
         return {
-            isSelected: false
+            isSelected: false,
+            textToShow:''
         }
     },
     methods: {
@@ -86,6 +87,10 @@ export default {
         isRead() {
             return this.email.isRead;
         }
+    },
+    created(){
+        this.textToShow=(this.email.body.length> 60)?this.email.body.substring(0, 50) +'...' :this.email.body;
+      
     }
 }
 

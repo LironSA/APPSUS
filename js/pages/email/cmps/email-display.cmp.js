@@ -11,7 +11,7 @@ export default {
 
             <div class="displayed-subject"><span>Subject: </span>{{email.subject}}</div>
             <div class="received-name" v-if="email.receivedFrom"><span>Received from: </span>{{email.receivedFrom.name}}</div>
-            <div class="received-addr" v-if="email.receivedFrom">{{email.receivedFrom.addr}}</div>
+            <div class="received-addr" v-if="email.receivedFrom"><span>Email address: </span>{{email.receivedFrom.addr}}</div>
             <div class="displayed-body">{{email.body}}</div>
             <div class="displayed-sentAt"><span>Received at: </span>{{timeToShow}}</div>
             <button @click.stop="removeEmail(email.id)">Delete</button>
