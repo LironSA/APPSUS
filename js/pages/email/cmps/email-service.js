@@ -1,6 +1,7 @@
 'use strict';
 import { storageService } from '../../../services/util-service.js'
 import { makeId } from '../../../services/util-service.js'
+import emailCmp from '../email.cmp.js';
 
 export const emailService = {
     getEmails,
@@ -45,6 +46,8 @@ function sendEmail(email) {
     email.sentAt = Date.now()
     email.id = makeId()
     gEmails.unshift(email)
+    email.isStarred=false
+    email.isRead=true
     storageService.store(EMAILS_KEY, gEmails)
     const msg = {
         txt: `Sent Succefully `,
