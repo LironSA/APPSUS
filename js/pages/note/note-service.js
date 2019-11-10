@@ -25,8 +25,19 @@ function getNotes() {
     }
     return Promise.resolve(gNotes)
 }
-
+function getVidUrl(url) {
+    var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+    var match = url.match(regExp);
+    if (match && match[2].length == 11) {
+        return '//www.youtube.com/embed/' + match[2];
+    } else {
+        return 'error';
+    }
+}
 function addNote(noteObj) {
+    if(noteObj.noteType==='vid-note-prv'){
+        noteObj.content=getVidUrl(noteObj.content)
+    }
     const note = {
         id: makeId(),
         type: noteObj.noteType,

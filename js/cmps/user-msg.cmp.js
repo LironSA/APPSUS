@@ -3,9 +3,9 @@ import {eventBus} from '../services/event-bus.service.js'
 
 export default {
     template: `
-        <section class="user-msg" v-if="msg" :class="msg.class">
+        <section class="user-msg flex align-center " v-if="msg" :class="msg.type">
+        <p>{{msg.txt}}</p>
             <button @click="close">x</button>
-            <p>{{msg.txt}}</p>
             <!-- <router-link v-if="msg.path" to="msg.path"></router-link> -->
         </section>
     `,

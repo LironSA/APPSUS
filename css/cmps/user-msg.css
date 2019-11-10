@@ -1,13 +1,20 @@
 .user-msg {
-    background-color: lightgray;
-    padding: 20px;
+    padding: 15px;
     position: absolute;
     top: 0;
     right: 0;
+    color: black;
+    border-radius: 10%;
+    height: 50px;
+    width: 150px;
+    justify-content: space-between;
 }
 
 .user-msg button {
     float: right;
+    background-color: blanchedalmond;
+    border-radius: 1000px;
+    
 }
 
 .user-msg.success {

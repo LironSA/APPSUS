@@ -11,7 +11,7 @@ let app = {
         `   <div class="main-container">
         <app-header></app-header>
         <transition enter-active-class="animated fadeInLeftBig" leave-active-class="animated fadeOutRightBig">
-        <router-view style="height: 80%; width:100% "></router-view>
+        <router-view ></router-view>
         </transition>
         <app-footer></app-footer>
         </div>

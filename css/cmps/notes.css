@@ -168,7 +168,6 @@
   height: 100%;
 }
 
-<<<<<<< HEAD
 /* --- Img note --- */
 .img-note-prv{
   display: flex;
@@ -185,17 +184,4 @@
 .img-note-prv .note-prv-menu{
   align-self: flex-end;
 }
-=======
-<<<<<<< HEAD
-/* 
-.pinned-notes {
-    border-bottom: cornflowerblue 1px solid;
-    background-image: url("/img/pinned.jpg"); */
-/* background-color: red; */
-/* 
-.unpinned-notes {
-    background-image: url("/img/unpinned-bgc.png");
-    /* background-color: red; */
-=======
->>>>>>> b75aa7be43f2ca9983cf57e0b15a49d9e2d293ba
->>>>>>> 6b1dedbff97bf1c18caac25af342f5b26ce2f83e
+
