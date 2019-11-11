@@ -6,11 +6,11 @@ export default {
     template: `
             <section class="note-bgc-change">
                     <div @click="onBgcChange" style="background-color:#fff" ref="white" id="white"></div>
-                    <div @click="onBgcChange" style="background-color:rgb(255, 148, 255)"  ref="pink" id="pink"></div>
-                    <div @click="onBgcChange" style="background-color:rgb(255, 171, 75) " ref="orange" id="orange"></div>
-                    <div @click="onBgcChange" style="background-color: rgb(173, 92, 173)" ref="purple" id ="purple"></div>
+                    <div @click="onBgcChange" style="background-color:rgb(238, 37, 238)"  ref="pink" id="pink"></div>
+                    <div @click="onBgcChange" style="background-color:rgb(250, 167, 12) " ref="orange" id="orange"></div>
+                    <div @click="onBgcChange" style="background-color: rgb(250, 250, 7)" ref="purple" id ="purple"></div>
                     <div @click="onBgcChange" style="background-color:rgb(32, 110, 255);" ref="blue" id ="blue"></div>
-                    <div @click="onBgcChange" style="background-color:rgb(43, 255, 106)" ref="green"id ="green"></div>
+                    <div @click="onBgcChange" style="background-color:rgb(53, 218, 247)" ref="green"id ="green"></div>
             </section>
     `,
     data() {

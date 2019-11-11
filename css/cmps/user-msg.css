@@ -12,13 +12,18 @@
 
 .user-msg button {
     float: right;
-    background-color: blanchedalmond;
+    background-color: #1D7874;
     border-radius: 1000px;
+
     
 }
 
 .user-msg.success {
-    background-color: lightgreen;
+    background-color: orange;
+    color: black;
+    height: 60px;
+    top: 170px;
+    right : 100px
 }
 .user-msg.error {
     background-color: lightcoral;

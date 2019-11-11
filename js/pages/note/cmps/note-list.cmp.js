@@ -9,7 +9,7 @@ export default {
   template: `
   <div class="note-list-container">
   <p v-if="title">{{title}}</p>
-     <ul class="clean-list flex wrap">
+     <ul class="clean-list flex wrap justify-center">
           <component class="dyn-cmp" v-for="note in notes" :key="note.id" :is='note.type' :note="note" >
           </component>       
      </ul>
