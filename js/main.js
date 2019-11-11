@@ -12,6 +12,8 @@ let app = {
         `   
         <div class="main-container">
         <app-header></app-header>
+
+
         <transition enter-active-class="animated fadeInLeftBig" leave-active-class="animated fadeOutRightBig">
         <router-view ></router-view>
         </transition>
@@ -19,12 +21,26 @@ let app = {
         </div>
         `
     ,
+    data(){
+        return{
+            route: ''
+        }
+    },
 
     components: {
         appHeader,
         appFooter,
         appHomePage
+    },
+    created(){
+       this.route= this.$route.path;
+       console.log(this.route);
+       
+        
     }
 }
 
 new Vue(app);
+
+
+{/* <app-homePage v-if="route=== '/home'></app-homePage> */}

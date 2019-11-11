@@ -14,6 +14,7 @@ export default {
         <nav class="nav-header flex wrap" v-if="isOpenMenu">
             <router-link to="/email/list/inbox"><img  @click.stop="toggleMenu">Email</router-link> 
             <router-link to="/note"><img @click.stop="toggleMenu"alt="">Notes</router-link> 
+            <router-link to="/home"><img @click.stop="toggleMenu"alt="">Home</router-link> 
         </nav>
     </header>
     
