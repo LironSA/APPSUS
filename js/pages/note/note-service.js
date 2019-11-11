@@ -87,7 +87,7 @@ function setNoteProperty(data) {
 
 
 const DEFUALT_NOTES = [
-    { id: makeId(), type: 'vid-note-prv', content: 'https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1', isPinned: true,'backgroundColor': 'yellow', createdAt: 1554580930594 },
+    { id: makeId(), type: 'vid-note-prv', content: 'https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=0', isPinned: true,'backgroundColor': 'yellow', createdAt: 1554580930594 },
     { id: makeId(), type: 'img-note-prv', content: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1200px-Vue.js_Logo_2.svg.png', isPinned: true, 'backgroundColor': 'pink', createdAt: 1664580930594 },
     { id: makeId(), type: 'txt-note-prv', content: 'VERY IMPORTANT - to buy a birthday present to Omri!!!', isPinned: true, 'backgroundColor': 'blue', createdAt: 1554580930594 },
     { id: makeId(), type: 'todo-note-prv', content: 'milk, bread, shoko, tomatos, ice-cream, cheese, bamba ', isPinned: true, 'backgroundColor': 'red', createdAt: 1664580930594 },
